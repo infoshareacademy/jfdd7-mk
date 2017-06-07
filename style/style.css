@@ -1,0 +1,12 @@
+.menu  {
+    display: inline;
+    list-style: none;
+    float: right;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid darkblue;
+}
+header {
+    position: fixed;
+    width: 100%;
+}
