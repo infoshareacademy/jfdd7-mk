@@ -1,8 +1,10 @@
-.zajawka {
-    background-image: url(../images/tlo-2.png);
+header {
+    background-image: url(../images/header.png);
     background-size: contain;
+    background-repeat: no-repeat;
     min-height: 100vh;
-    opacity: 0.5;
+    opacity: 0.9;
+    background-position: center;
 }
 
 h1 {
@@ -12,8 +14,20 @@ h1 {
     padding: 100px;
     opacity: 0.99;
 }
+#logo {
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+#main-menu {
+    width:100%;
+}
+.menu {
+    ;
+}
 
-.menu  {
+
+.menu li {
     display: inline;
     list-style: none;
     float: right;
