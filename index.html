@@ -2,9 +2,9 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>GDZIE DOJADĘ?</title>
+    <title>GDZIE POĆWICZĘ</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster">
 </head>
 <body>
 <header>
@@ -25,18 +25,14 @@
     </div>
 </header>
 <div class="clear"></div>
+
 <main>
     <div id="o-nas"></div>
     <div id="o-aplikacji"></div>
     <div id="dolacz-do-nas">
-        <form>
-                <input type="text" name="email" value="email@mail.com">
-                <input type="submit" name="submit" value="WYŚLIJ">
-        </form>
-    </div>
     <ul class="funkcjonalnosci">
         <li class="funkcja-mapa">
-            Mapa obiektów niedaleko Ciebie,l
+            Mapa obiektów niedaleko Ciebie
 
         </li>
 
@@ -55,10 +51,16 @@
            Wolisz sam? Znajdź odpowiedni plan treningowy u nas
 
         </li>
-    </ul>
-
+    </ul><br><br><br>
+        <form action method="post" enctype="text/plain" >
+            <div class="formularz">
+                <input type="text" name="email" aria-valuetext="email@gmail.com" placeholder="Email:">
+                <input type="submit" name="submit" value="WYŚLIJ">
+            </div>
+        </form>
+    </div>
 </main>
-<footer></footer>
-
+<footer>
+</footer>
 </body>
 </html>
