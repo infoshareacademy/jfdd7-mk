@@ -30,6 +30,9 @@ h2 {
     left: 0;
     right: 0;
     z-index: 100;
+    width:100%;
+    text-align: center;
+    position: fixed;
 }
 .clear {
     clear: both;
@@ -38,6 +41,7 @@ h2 {
 .menu  li{
     display: inline;
     list-style: none;
+
     padding: 5px;
     margin: 10px;
 }
@@ -75,4 +79,45 @@ a:hover {
 }
 #o-nas{
 
+}
+
+body {
+    margin: 0px;
+}
+
+
+.funkcjonalnosci{
+    /*text-align: center;*/
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.funkcjonalnosci li {
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    margin-left:10px;
+    margin-right:10px;
+    padding-top: 150px;
+    background-size: 100px auto;
+    background-repeat: no-repeat;
+    background-position: center 20px;
+    vertical-align: middle;
+}
+
+
+.funkcja-info-o-obiekcie {
+    background-image: url('../images/ikona-info.png');
+}
+
+.funkcja-mapa {
+    background-image: url('../images/ikona-mapa.png');
+}
+.funkcja-trener {
+    background-image: url("../images/ikona-trener.png");
+
+}
+.funkcja-plan {
+    background-image: url("../images/ikona-planu.png");
 }
