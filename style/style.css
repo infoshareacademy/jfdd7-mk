@@ -1,19 +1,26 @@
 header {
     background-image: url(../images/header.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
     opacity: 0.9;
     background-position: center;
-    position: fixed;
     width: 100%;
 }
 
 h1 {
-    font-family: "DejaVu Serif", sans-serif;
+    font-family: 'Lobster', cursive, sans-serif;
     color: black;
 
-    padding: 100px;
+    padding-top: 100px;
+    padding-bottom: 10px;
+    padding-left: 100px;
+    opacity: 0.99;
+}
+h2 {
+    font-family: 'Lobster', cursive, sans-serif;
+    color: black;
+    padding-left: 100px;
     opacity: 0.99;
 }
 #logo {
@@ -23,12 +30,55 @@ h1 {
 }
 #main-menu {
     width:100%;
+    text-align: center;
+    position: fixed;
 }
-.menu  {
+.menu  li{
     display: inline;
     list-style: none;
-    float: right;
+
     padding: 5px;
     margin: 10px;
     border: 1px solid darkblue;
+}
+
+body {
+    margin: 0px;
+}
+
+
+.funkcjonalnosci{
+    /*text-align: center;*/
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.funkcjonalnosci li {
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    margin-left:10px;
+    margin-right:10px;
+    padding-top: 150px;
+    background-size: 100px auto;
+    background-repeat: no-repeat;
+    background-position: center 20px;
+    vertical-align: middle;
+}
+
+
+.funkcja-info-o-obiekcie {
+    background-image: url('../images/ikona-info.png');
+}
+
+.funkcja-mapa {
+    background-image: url('../images/ikona-mapa.png');
+}
+.funkcja-trener {
+    background-image: url("../images/ikona-trener.png");
+    
+}
+.funkcja-plan {
+    background-image: url("../images/ikona-planu.png");
 }
