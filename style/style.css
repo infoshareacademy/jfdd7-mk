@@ -1,8 +1,12 @@
-.zajawka {
-    background-image: url(../images/tlo.jpg);
+header {
+    background-image: url(../images/header.png);
     background-size: contain;
+    background-repeat: no-repeat;
     min-height: 100vh;
-    opacity: 0.5;
+    opacity: 0.9;
+    background-position: center;
+    position: fixed;
+    width: 100%;
 }
 
 h1 {
@@ -12,7 +16,14 @@ h1 {
     padding: 100px;
     opacity: 0.99;
 }
-
+#logo {
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+#main-menu {
+    width:100%;
+}
 .menu  {
     display: inline;
     list-style: none;
@@ -20,8 +31,4 @@ h1 {
     padding: 5px;
     margin: 10px;
     border: 1px solid darkblue;
-}
-header {
-    position: fixed;
-    width: 100%;
 }
