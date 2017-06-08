@@ -1,6 +1,6 @@
 header {
     background-image: url(../images/header.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
     opacity: 0.9;
@@ -10,25 +10,53 @@ header {
 }
 
 h1 {
-    font-family: "DejaVu Serif", sans-serif;
+    font-family: 'Lobster', cursive, sans-serif;
     color: black;
 
-    padding: 100px;
+    padding-top: 100px;
+    padding-bottom: 10px;
+    padding-left: 100px;
     opacity: 0.99;
 }
-#logo {
+h2 {
+    font-family: 'Lobster', cursive, sans-serif;
+    color: black;
+    padding-left: 100px;
+    opacity: 0.99;
+}
+#main-menu {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.clear {
+    clear: both;
+}
+
+.menu  li{
+    display: inline;
+    list-style: none;
+    padding: 5px;
+    margin: 10px;
+}
+
+body {
+    margin: 0;
+}
+
+.logo {
     float: left;
     width: 50px;
     height: 50px;
+    background-image: url("../images/logo.png");
+    background-size: contain;
+    display: block;
 }
-#main-menu {
-    width:100%;
-}
-.menu  {
-    display: inline;
-    list-style: none;
-    float: right;
-    padding: 5px;
-    margin: 10px;
-    border: 1px solid darkblue;
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
 }
