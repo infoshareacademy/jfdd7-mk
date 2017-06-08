@@ -5,6 +5,8 @@ header {
     min-height: 100vh;
     opacity: 0.9;
     background-position: center;
+    position: fixed;
+    width: 100%;
 }
 
 h1 {
@@ -22,20 +24,11 @@ h1 {
 #main-menu {
     width:100%;
 }
-.menu {
-    ;
-}
-
-
-.menu li {
+.menu  {
     display: inline;
     list-style: none;
     float: right;
     padding: 5px;
     margin: 10px;
     border: 1px solid darkblue;
-}
-header {
-    position: fixed;
-    width: 100%;
 }
