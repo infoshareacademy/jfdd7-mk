@@ -1,4 +1,4 @@
-header {
+#main-header {
     background-image: url(../images/header.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -8,7 +8,7 @@ header {
     width: 100%;
 }
 
-h1 {
+.zajawka h1 {
     font-family: 'Lobster', cursive, sans-serif;
     color: black;
 
@@ -17,12 +17,14 @@ h1 {
     padding-left: 100px;
     opacity: 0.99;
 }
-h2 {
+
+.zajawka h2 {
     font-family: 'Lobster', cursive, sans-serif;
     color: black;
     padding-left: 100px;
     opacity: 0.99;
 }
+
 #main-menu {
     text-align: center;
     position: fixed;
@@ -30,15 +32,14 @@ h2 {
     left: 0;
     right: 0;
     z-index: 100;
-    width:100%;
-    text-align: center;
-    position: fixed;
+    width: 100%;
 }
+
 .clear {
     clear: both;
 }
 
-.menu  li{
+.menu li {
     display: inline;
     list-style: none;
 
@@ -64,29 +65,17 @@ a {
     color: black;
     font-size: 22px;
 }
+
 a:hover {
     text-decoration: underline;
     text-decoration-color: yellowgreen;
 }
-#home {
-
-}
-#o-aplikacji{
-
-}
-#dolacz-do-nas{
-
-}
-#o-nas{
-
-}
 
 body {
-    margin: 0px;
+    margin: 0;
 }
 
-
-.funkcjonalnosci{
+.funkcjonalnosci {
     /*text-align: center;*/
     margin: 0;
     padding: 0;
@@ -97,15 +86,14 @@ body {
     display: inline-block;
     width: 250px;
     height: 50px;
-    margin-left:10px;
-    margin-right:10px;
+    margin-left: 10px;
+    margin-right: 10px;
     padding-top: 150px;
     background-size: 100px auto;
     background-repeat: no-repeat;
     background-position: center 20px;
     vertical-align: middle;
 }
-
 
 .funkcja-info-o-obiekcie {
     background-image: url('../images/ikona-info.png');
@@ -114,10 +102,53 @@ body {
 .funkcja-mapa {
     background-image: url('../images/ikona-mapa.png');
 }
+
 .funkcja-trener {
     background-image: url("../images/ikona-trener.png");
 
 }
+
 .funkcja-plan {
     background-image: url("../images/ikona-planu.png");
+}
+
+#dolacz-do-nas {
+    text-align: center;
+
+}
+
+#dolacz-do-nas input {
+    font-size: 24px;
+}
+.input-email {
+    width: 380px;
+    padding: 9px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.button {
+    border-radius: 5px;
+    background-color: #b543a0;
+    color: whitesmoke;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #bd5dac;
+}
+#dolacz-do-nas header h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    text-align: center;
+}
+#dolacz-do-nas header h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
 }
