@@ -11,7 +11,6 @@
 .zajawka h1 {
     font-family: 'Lobster', cursive, sans-serif;
     color: black;
-
     padding-top: 100px;
     padding-bottom: 10px;
     padding-left: 100px;
@@ -26,6 +25,7 @@
 }
 
 #main-menu {
+    background-color: white;
     text-align: center;
     position: fixed;
     top: 0;
@@ -140,6 +140,13 @@ body {
 .button:hover {
     background-color: #bd5dac;
 }
+#dolacz-do-nas{
+    background-image: url("../images/ikona-koperty.png");
+    background-size:  auto;
+    background-position: left;
+    background-repeat: no-repeat;
+    float: left;
+}
 #dolacz-do-nas header h1 {
     font-family: 'Arial', sans-serif;
     font-size: 40px;
@@ -151,6 +158,12 @@ body {
     font-size: 20px;
     font-weight: 100;
     text-align: center;
+}
+form div {
+    font-size: 12px;
+    color: grey;
+    padding: 8px;
+
 }
 
 .o-nas li{
