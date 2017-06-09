@@ -152,3 +152,42 @@ body {
     font-weight: 100;
     text-align: center;
 }
+
+.o-nas li{
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 250px;
+    background-size: 200px auto;
+    background-repeat: no-repeat;
+    background-position: center 20px;
+    vertical-align: middle;
+}
+
+.o-nas {
+    background-color: #d3caa3;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.o-teamie-naglowek {
+    text-align: center;
+}
+.informacje-o-dominice{
+    background-image: url("../images/dominika-zdjecie-zespolu.png");
+}
+
+.informacje-o-michale-p {
+    background-image: url("../images/michal-p-zdjecie-zespolu.png");
+}
+
+.informacje-o-adamie {
+    background-image: url("../images/adam-zdjecie-zespolu.png");
+}
+
+.informacje-o-michale-k {
+    background-image: url("../images/michal-k-zdjecie-zespolu.png");
+}
