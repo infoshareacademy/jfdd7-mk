@@ -1,4 +1,4 @@
-#main-header {
+.zajawka {
     background-image: url(../images/header.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -6,12 +6,17 @@
     opacity: 0.9;
     background-position: center;
     width: 100%;
+    margin-top: 65px;
+}
+section {
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .zajawka h1 {
-    font-family: 'Lobster', cursive, sans-serif;
+    font-family: 'Francois One', sans-serif;
+    font-size: large;
     color: black;
-
     padding-top: 100px;
     padding-bottom: 10px;
     padding-left: 100px;
@@ -19,13 +24,18 @@
 }
 
 .zajawka h2 {
-    font-family: 'Lobster', cursive, sans-serif;
+    font-family: 'Francois One', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
     color: black;
     padding-left: 100px;
     opacity: 0.99;
 }
 
 #main-menu {
+    background-color: rgba(255,255,255,0.8);
+    font-family: 'Francois One', sans-serif;
+    font-weight: 400;
     text-align: center;
     position: fixed;
     top: 0;
@@ -53,7 +63,7 @@ body {
 
 .logo {
     float: left;
-    width: 50px;
+    width: 165px;
     height: 50px;
     background-image: url("../images/logo.png");
     background-size: contain;
@@ -66,9 +76,8 @@ a {
     font-size: 22px;
 }
 
-a:hover {
-    text-decoration: underline;
-    text-decoration-color: yellowgreen;
+.menu li a:hover {
+    border-bottom: 3px solid #b543a0;
 }
 
 body {
@@ -80,6 +89,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    font-size: 22px;
 }
 
 .funkcjonalnosci li {
@@ -93,6 +103,7 @@ body {
     background-repeat: no-repeat;
     background-position: center 20px;
     vertical-align: middle;
+    font-family: 'Francois One', sans-serif;
 }
 
 .funkcja-info-o-obiekcie {
@@ -114,11 +125,19 @@ body {
 
 #dolacz-do-nas {
     text-align: center;
-
+    display: block;
+    background-image: url("../images/ikona-koperty.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size:contain;
+    font-family: 'Francois One', sans-serif;
+    margin-left: 16vw;
+    padding-left: 10vw;
 }
 
 #dolacz-do-nas input {
     font-size: 24px;
+
 }
 .input-email {
     width: 380px;
@@ -128,7 +147,7 @@ body {
 }
 .button {
     border-radius: 5px;
-    background-color: rgb(181, 67, 160);
+    background-color: #b543a0;
     color: whitesmoke;
     padding: 10px 25px;
     text-transform: uppercase;
@@ -140,17 +159,25 @@ body {
 .button:hover {
     background-color: #bd5dac;
 }
+
 #dolacz-do-nas header h1 {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Francois One', sans-serif;
     font-size: 40px;
     font-weight: 100;
     text-align: center;
 }
 #dolacz-do-nas header h2 {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Francois One', sans-serif;
     font-size: 20px;
     font-weight: 100;
     text-align: center;
+}
+form div {
+    font-size: 12px;
+    color: grey;
+    padding: 8px;
+
+
 }
 
 .o-nas li{
@@ -164,6 +191,7 @@ body {
     background-repeat: no-repeat;
     background-position: center 20px;
     vertical-align: middle;
+    font-family: "Francois One", sans-serif;
 }
 
 .o-nas {
@@ -171,10 +199,12 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    font-family: "Francois One", sans-serif;
 }
 
 .o-teamie-naglowek {
     text-align: center;
+    font-family: "Francois One", sans-serif;
 }
 .informacje-o-dominice{
     background-image: url("../images/dominika-zdjecie-zespolu.png");
