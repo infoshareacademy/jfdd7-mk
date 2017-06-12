@@ -1,5 +1,5 @@
 .zajawka {
-    background-image: url(../images/header.png);
+    background-image: url(../images/header.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -183,8 +183,15 @@ form div {
     font-size: 12px;
     color: grey;
     padding: 8px;
+    }
 
-
+.nad-sekcja-o-nas {
+    width: auto;
+    min-height: 600px;
+    background-image: url(../images/zdjecie-do-tla-zajawki.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .o-nas li{
@@ -206,7 +213,7 @@ form div {
     margin: 0;
     text-align: center;
     font-family: "Francois One", sans-serif;
-    padding-top: 63px;
+    padding-top: 1px;
 }
 
 .o-teamie-naglowek {
