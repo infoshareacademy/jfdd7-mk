@@ -3,11 +3,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
-    opacity: 0.9;
     background-position: center;
     width: 100%;
-    margin-top: 1px;
+    /*margin-top: 1px;*/
     background-attachment: fixed;
+
 }
 #main-header{
     min-height: 50px;
@@ -50,17 +50,16 @@ section {
     width: 100%;
 }
 
-
 .clear {
     clear: both;
 }
 
 .menu li {
-    display: inline;
+    display: inline-block;
     list-style: none;
-
-    padding: 5px;
-    margin: 10px;
+    /*padding: 5px;*/
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 body {
@@ -74,11 +73,14 @@ body {
     background-image: url("../images/logo.png");
     background-size: contain;
     display: block;
+    margin-top: 10px;
 }
 
-a {
+.menu a {
     text-decoration: none;
     color: black;
+    font-size: 22px;
+
 }
 
 .menu li a:hover {
@@ -131,15 +133,28 @@ body {
 #dolacz-do-nas {
     text-align: center;
     display: block;
-    background-image: url("../images/ikona-koperty.png");
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size:contain;
     font-family: 'Francois One', sans-serif;
-    padding-left: 10vw;
-    margin: 30px;
+    padding-left: 100px;
     padding-top: 63px;
+    padding-bottom: 63px;
+    background-image: url("../images/ikona-koperty.png");
+    background-position: left center;
+    background-size: 120px auto;
+    background-repeat: no-repeat;
+    width: 700px;
+    margin: 0 auto;
 }
+
+@media screen and (max-width: 900px) {
+    #dolacz-do-nas {
+      width: 500px;
+        padding-left: 0;
+        padding-top: 100px;
+        background-position: center 20px;
+
+    }
+}
+
 
 #dolacz-do-nas input {
     font-size: 24px;
@@ -178,10 +193,11 @@ body {
     font-weight: 100;
     text-align: center;
 }
-form div {
+fieldset {
     font-size: 12px;
     color: grey;
     padding: 8px;
+    border: none;
     }
 
 .nad-sekcja-o-nas {
@@ -191,6 +207,8 @@ form div {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    border: none;
+
 }
 
 .o-nas li{
@@ -235,6 +253,14 @@ form div {
 .informacje-o-michale-k {
     background-image: url("../images/michal-k-zdjecie-zespolu.png");
 }
+
+#funkcjonalnosci li:last-child:after, #main-menu li:last-child:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+
 
 .logo-stopki {
     height: 50px;

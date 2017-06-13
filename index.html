@@ -8,7 +8,7 @@
 
 <body>
 <header id="main-header">
-    <div id="home">
+    <div id="home"></div>
         <nav id="main-menu">
             <a href="#home" class="logo"></a>
             <ul class="menu">
@@ -18,13 +18,12 @@
              <li><a href="#o-nas">O NAS</a></li>
             </ul>
         </nav>
-        <div class="clear"></div>
-    </div>
 </header>
 <main>
     <div class="zajawka">
-        <h2>Dzięki naszej aplikacji nigdy nie zabraknie Ci miejsc do ćwiczeń</h2>
         <h1>Z nami odnajdziesz swoje miejsce!</h1>
+        <h2>Dzięki naszej aplikacji nigdy nie zabraknie Ci miejsc do ćwiczeń</h2>
+
     </div>
 
 
@@ -36,21 +35,18 @@
         <li class="funkcja-plan">Wolisz sam? Znajdź odpowiedni plan treningowy u nas</li>
     </ul>
 </section>
-<div class="clear"></div>
 <section id="dolacz-do-nas">
-    <header>
         <h1>Chcesz zacząć ćwiczyć razem z nami?</h1>
         <h2>Wypełnij formularz, aby dowiedzieć się więcej o naszej aplikacji!</h2>
-    </header>
-    <form>
-        <input class="input-email" type="email" name="email" placeholder="mail@mail.com" >
-        <input class="button" type="submit" name="submit" value="Wyślij">
-        <div>Gwarantujemy, że po dołączeniu do naszej aplikacji, otrzymasz jeden mail z informacją o dacie jej premiery.</div>
-    </form>
-
+    <fieldset>
+        <form action="https://formspree.io/gdziepocwicze@gmail.com" method="post">
+            <input class="input-email" type="email" name="email" placeholder="mail@mail.com" >
+            <input class="button" type="submit" name="submit" value="Wyślij"><br>
+            <small>Gwarantujemy, że po dołączeniu do naszej aplikacji,
+                otrzymasz jeden mail z informacją o dacie jej premiery.</small>
+        </form>
+    </fieldset>
 </section>
-<div class="clear"></div>
-
     <div class="nad-sekcja-o-nas">
     </div>
 
