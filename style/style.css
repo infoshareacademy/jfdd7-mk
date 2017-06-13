@@ -3,38 +3,42 @@
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
-    background-position: center;
+    background-position: center 63px;
     width: 100%;
     /*margin-top: 1px;*/
     background-attachment: fixed;
-
+    display: flex;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
 }
+.header-zajawka {
+    width: 350px;
+    height: auto;
+}
+
 #main-header{
     min-height: 50px;
 }
 
 section {
-    /*margin-top: 50px;*/
-    margin-bottom: 50px;
+     margin-bottom: 50px;
 }
 
 .zajawka h1 {
     font-family: 'Francois One', sans-serif;
-    font-size: 25px;
     color: black;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 300px;
-    opacity: 0.99;
-}
+    font-size: 34px;
+    font-weight: 300;
+   }
 
 .zajawka h2 {
     font-family: 'Francois One', sans-serif;
     font-weight: 300;
     font-size: 40px;
     color: black;
-    padding-left: 100px;
-    opacity: 0.99;
 }
 
 #main-menu {
@@ -57,7 +61,6 @@ section {
 .menu li {
     display: inline-block;
     list-style: none;
-    /*padding: 5px;*/
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -92,8 +95,6 @@ body {
 }
 
 .funkcjonalnosci {
-    /*text-align: center;*/
-    margin: 0;
     padding-top: 63px;
     text-align: center;
     font-size: 22px;
