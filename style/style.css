@@ -50,7 +50,6 @@ section {
     width: 100%;
 }
 
-
 .clear {
     clear: both;
 }
@@ -132,15 +131,33 @@ body {
 #dolacz-do-nas {
     text-align: center;
     display: block;
+    font-family: 'Francois One', sans-serif;
+    padding-left: 100px;
+    padding-top: 63px;
+    padding-bottom: 63px;
     background-image: url("../images/ikona-koperty.png");
-    background-position: left;
+    background-position: left center;
+    background-size: 120px auto;
     background-repeat: no-repeat;
     background-size:contain;
     font-family: 'Francois One', sans-serif;
     padding-left: 10vw;
     margin: 30px;
     padding-top: 63px;
+    width: 700px;
+    margin: 0 auto;
 }
+
+@media screen and (max-width: 900px) {
+    #dolacz-do-nas {
+      width: 500px;
+        padding-left: 0;
+        padding-top: 100px;
+        background-position: center 20px;
+
+    }
+}
+
 
 #dolacz-do-nas input {
     font-size: 24px;
@@ -179,7 +196,7 @@ body {
     font-weight: 100;
     text-align: center;
 }
-form div {
+fieldset {
     font-size: 12px;
     color: grey;
     padding: 8px;
@@ -192,6 +209,8 @@ form div {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    border: none;
+
 }
 
 .o-nas li{
@@ -235,3 +254,10 @@ form div {
 .informacje-o-michale-k {
     background-image: url("../images/michal-k-zdjecie-zespolu.png");
 }
+
+#funkcjonalnosci li:last-child:after, #main-menu li:last-child:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
