@@ -3,11 +3,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
-    opacity: 0.9;
     background-position: center;
     width: 100%;
-    margin-top: 1px;
+    /*margin-top: 1px;*/
     background-attachment: fixed;
+
 }
 #main-header{
     min-height: 50px;
@@ -55,11 +55,11 @@ section {
 }
 
 .menu li {
-    display: inline;
+    display: inline-block;
     list-style: none;
-
-    padding: 5px;
-    margin: 10px;
+    /*padding: 5px;*/
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 body {
@@ -73,12 +73,14 @@ body {
     background-image: url("../images/logo.png");
     background-size: contain;
     display: block;
+    margin-top: 10px;
 }
 
-a {
+.menu a {
     text-decoration: none;
     color: black;
     font-size: 22px;
+
 }
 
 .menu li a:hover {
