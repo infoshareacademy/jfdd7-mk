@@ -14,7 +14,7 @@
 }
 
 section {
-    margin-top: 50px;
+    /*margin-top: 50px;*/
     margin-bottom: 50px;
 }
 
@@ -227,10 +227,11 @@ fieldset {
 
 #o-nas {
     background-color: #d3caa3;
-    margin: 0;
+    background: linear-gradient(#d3caa3, #d3cb73);
     text-align: center;
     font-family: "Francois One", sans-serif;
     padding-top: 1px;
+    margin-bottom: 0;
 }
 
 .o-teamie-naglowek {
@@ -259,3 +260,26 @@ fieldset {
     content: '';
 }
 
+
+
+.logo-stopki {
+    height: 50px;
+    background-image: url(../images/logo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 20px;
+}
+
+footer{
+    text-align: center;
+    font-family: 'Francois One', sans-serif;
+}
+
+.mail-stopka {
+    padding-bottom: 10px;
+}
+
+.wszelakie-wszelakosci-stopkowe * {
+    display: inline-block;
+}
