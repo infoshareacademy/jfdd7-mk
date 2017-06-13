@@ -194,7 +194,10 @@ body {
     font-weight: 100;
     text-align: center;
 }
-fieldset {
+.dolacz-do-nas fieldset {
+    border: none;
+}
+.dolacz-do-nas small {
     font-size: 12px;
     color: grey;
     padding: 8px;
