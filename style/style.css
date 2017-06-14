@@ -1,3 +1,64 @@
+section {
+    margin-bottom: 50px;
+}
+
+body {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+#funkcjonalnosci li:last-child:after, #main-menu li:last-child:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+.logo {
+    float: left;
+    width: 165px;
+    height: 50px;
+    background-image: url("../images/logo.png");
+    background-size: contain;
+    display: block;
+    margin-top: 10px;
+}
+
+.menu li a:hover {
+    border-bottom: 3px solid #b543a0;
+}
+
+.main-header {
+    min-height: 50px;
+}
+
+.main-menu {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: 'Francois One', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+
+.menu li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .zajawka {
     background-image: url(../images/header.jpg);
     background-size: cover;
@@ -18,14 +79,6 @@
     height: auto;
 }
 
-#main-header {
-    min-height: 50px;
-}
-
-section {
-    margin-bottom: 50px;
-}
-
 .zajawka h1 {
     font-family: 'Francois One', sans-serif;
     color: black;
@@ -40,57 +93,10 @@ section {
     color: black;
 }
 
-#main-menu {
-    background-color: rgba(255, 255, 255, 0.8);
-    font-family: 'Francois One', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    width: 100%;
-}
-
-.menu li {
-    display: inline-block;
-    list-style: none;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-body {
-    margin: 0;
-}
-
-.logo {
-    float: left;
-    width: 165px;
-    height: 50px;
-    background-image: url("../images/logo.png");
-    background-size: contain;
-    display: block;
-    margin-top: 10px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: black;
-    font-size: 22px;
-
-}
-
-.menu li a:hover {
-    border-bottom: 3px solid #b543a0;
-}
-
-body {
-    margin: 0;
-}
-
 .funkcjonalnosci {
     padding-top: 63px;
+    padding-bottom: 63px;
+    padding-left: 0;
     text-align: center;
     font-size: 22px;
 }
@@ -127,12 +133,21 @@ body {
 }
 
 .przerywnik {
-    background-color: #d3caa3;
-    background: linear-gradient(#d3caa3, #d3cb73);
-    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
 }
 
-#dolacz-do-nas {
+.przerywnik div {
+    background-color: #b543a0;
+    /*background: linear-gradient(#d3caa3, #d3cb73);*/
+    height: 3px;
+    width: 1200px;
+    border: 1px;
+    border-radius: 90px;
+}
+
+.dolacz-do-nas {
     text-align: center;
     display: block;
     font-family: 'Francois One', sans-serif;
@@ -157,7 +172,7 @@ body {
     }
 }
 
-#dolacz-do-nas input {
+.dolacz-do-nas input {
     font-size: 24px;
 
 }
@@ -184,14 +199,14 @@ body {
     background-color: #bd5dac;
 }
 
-#dolacz-do-nas header h1 {
+.dolacz-do-nas header h1 {
     font-family: 'Francois One', sans-serif;
     font-size: 40px;
     font-weight: 100;
     text-align: center;
 }
 
-#dolacz-do-nas header h2 {
+.dolacz-do-nas header h2 {
     font-family: 'Francois One', sans-serif;
     font-size: 20px;
     font-weight: 100;
@@ -234,7 +249,7 @@ body {
     font-family: "Francois One", sans-serif;
 }
 
-#o-nas {
+.o-nas {
     background-color: #d3caa3;
     background: linear-gradient(#d3caa3, #d3cb73);
     text-align: center;
@@ -264,32 +279,36 @@ body {
     background-image: url("../images/michal-k-zdjecie-zespolu.png");
 }
 
-#funkcjonalnosci li:last-child:after, #main-menu li:last-child:after {
-    display: block;
-    clear: both;
-    content: '';
-}
-
 .logo-stopki {
-    height: 50px;
+    height: 29px;
+    width: 104px;
     background-image: url(../images/logo.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    margin: 20px;
+    margin-right: 20px;
 }
 
 footer {
     text-align: center;
     font-family: 'Francois One', sans-serif;
+    margin: 5px;
+}
+
+footer * {
+    display: inline-block;
+    vertical-align: bottom;
 }
 
 .mail-stopka {
-    padding-bottom: 10px;
     text-decoration: none;
     color: black;
 }
 
 .wszelakie-wszelakosci-stopkowe * {
     display: inline-block;
+}
+
+.o-nas {
+    margin-bottom: 0;
 }
