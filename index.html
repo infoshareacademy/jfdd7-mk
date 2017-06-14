@@ -8,7 +8,7 @@
 
 <body>
 <header id="main-header">
-    <div id="home">
+    <div id="home"></div>
         <nav id="main-menu">
             <a href="#home" class="logo"></a>
             <ul class="menu">
@@ -18,62 +18,58 @@
              <li><a href="#o-nas">O NAS</a></li>
             </ul>
         </nav>
-        <div class="clear"></div>
-    </div>
 </header>
 <main>
-    <div class="zajawka">
-        <h2>Dzięki naszej aplikacji nigdy nie zabraknie Ci miejsc do ćwiczeń</h2>
-        <h1>Z nami odnajdziesz swoje miejsce!</h1>
-    </div>
-
+    <header class="zajawka">
+        <div class="header-zajawka">
+            <h1>Nie wiesz gdzie poćwiczyć?</h1>
+            <h2>Dzięki naszej aplikacji nigdy nie zabraknie Ci miejsc ani pomysłów na trening!</h2>
+        </div>
+    </header>
 
 <section id="funkcjonalnosci">
     <ul class="funkcjonalnosci">
         <li class="funkcja-mapa">Mapa obiektów niedaleko Ciebie</li>
         <li class="funkcja-info-o-obiekcie">Szczegółowe informacje o porządanym przez Ciebie miejscu</li>
-
         <li class="funkcja-trener">Znajdź z nami swojego trenera</li>
-
         <li class="funkcja-plan">Wolisz sam? Znajdź odpowiedni plan treningowy u nas</li>
     </ul>
 </section>
-<div class="clear"></div>
-<section id="dolacz-do-nas">
-    <header>
+<section id="dolacz-do-nas" class="dolacz-do-nas">
         <h1>Chcesz zacząć ćwiczyć razem z nami?</h1>
         <h2>Wypełnij formularz, aby dowiedzieć się więcej o naszej aplikacji!</h2>
-    </header>
-    <form>
-        <input class="input-email" type="email" name="email" placeholder="mail@mail.com" >
-        <input class="button" type="submit" name="submit" value="Wyślij">
-        <div>Gwarantujemy, że po dołączeniu do naszej aplikacji, otrzymasz jeden mail z informacją o dacie jej premiery.</div>
-    </form>
+        <form action="https://formspree.io/gdziepocwicze@gmail.com" method="post">
+            <fieldset>
+                <input class="input-email" type="email" name="email" placeholder="mail@mail.com" >
+                <input class="button" type="submit" name="submit" value="Wyślij">
+            </fieldset>
+            <small>Gwarantujemy, że po dołączeniu do naszej aplikacji,
+                otrzymasz jeden mail z informacją o dacie jej premiery.</small>
+
+        </form>
 
 </section>
-<div class="clear"></div>
-
     <div class="nad-sekcja-o-nas">
     </div>
 
     <section id="o-nas">
         <h1 class="o-teamie-naglowek">O nas</h1>
         <ul class="o-nas">
-            <li class="informacje-o-dominice">
-                Dominika Kosiedowska
-            </li>
-            <li class="informacje-o-michale-p">
-                Michał Pokojski
-            </li>
-            <li class="informacje-o-adamie">
-                Adam Kowalski
-            </li>
-            <li class="informacje-o-michale-k">
-                Michał Kolasiński
-            </li>
+            <li class="informacje-o-dominice">Dominika Kosiedowska</li>
+            <li class="informacje-o-michale-p">Michał Pokojski</li>
+            <li class="informacje-o-adamie">Adam Kowalski</li>
+            <li class="informacje-o-michale-k">Michał Kolasiński</li>
         </ul>
     </section>
 </main>
-<footer></footer>
+<footer>
+    <div class="logo-stopki"></div>
+    <div class="wszelakie-wszelakosci-stopkowe">
+        <div class="copyright">Wszelkie prawa zastrzeżone © 2017 I|I </div>
+        <a href="mailto:gdzie.pocwicze@gmail.com" class="mail-stopka">Napisz do nas !</a>
+
+    </div>
+</footer>
 </body>
 </html>
+

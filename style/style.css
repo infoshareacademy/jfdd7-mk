@@ -3,38 +3,42 @@
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
-    opacity: 0.9;
-    background-position: center;
+    background-position: center 63px;
     width: 100%;
-    margin-top: 1px;
+    /*margin-top: 1px;*/
     background-attachment: fixed;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
 }
+.header-zajawka {
+    width: 350px;
+    height: auto;
+}
+
 #main-header{
     min-height: 50px;
 }
 
 section {
-    margin-top: 50px;
-    margin-bottom: 50px;
+     margin-bottom: 50px;
 }
 
 .zajawka h1 {
     font-family: 'Francois One', sans-serif;
-    font-size: 25px;
     color: black;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 300px;
-    opacity: 0.99;
-}
+    font-size: 34px;
+    font-weight: 300;
+   }
 
 .zajawka h2 {
     font-family: 'Francois One', sans-serif;
     font-weight: 300;
     font-size: 40px;
     color: black;
-    padding-left: 100px;
-    opacity: 0.99;
 }
 
 #main-menu {
@@ -50,17 +54,15 @@ section {
     width: 100%;
 }
 
-
 .clear {
     clear: both;
 }
 
 .menu li {
-    display: inline;
+    display: inline-block;
     list-style: none;
-
-    padding: 5px;
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 body {
@@ -74,12 +76,14 @@ body {
     background-image: url("../images/logo.png");
     background-size: contain;
     display: block;
+    margin-top: 10px;
 }
 
-a {
+.menu a {
     text-decoration: none;
     color: black;
     font-size: 22px;
+
 }
 
 .menu li a:hover {
@@ -91,8 +95,6 @@ body {
 }
 
 .funkcjonalnosci {
-    /*text-align: center;*/
-    margin: 0;
     padding-top: 63px;
     text-align: center;
     font-size: 22px;
@@ -132,15 +134,28 @@ body {
 #dolacz-do-nas {
     text-align: center;
     display: block;
-    background-image: url("../images/ikona-koperty.png");
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size:contain;
     font-family: 'Francois One', sans-serif;
-    padding-left: 10vw;
-    margin: 30px;
+    padding-left: 100px;
     padding-top: 63px;
+    padding-bottom: 63px;
+    background-image: url("../images/ikona-koperty.png");
+    background-position: left center;
+    background-size: 120px auto;
+    background-repeat: no-repeat;
+    width: 700px;
+    margin: 0 auto;
 }
+
+@media screen and (max-width: 900px) {
+    #dolacz-do-nas {
+      width: 500px;
+        padding-left: 0;
+        padding-top: 100px;
+        background-position: center 20px;
+
+    }
+}
+
 
 #dolacz-do-nas input {
     font-size: 24px;
@@ -179,10 +194,14 @@ body {
     font-weight: 100;
     text-align: center;
 }
-form div {
+.dolacz-do-nas fieldset {
+    border: none;
+}
+.dolacz-do-nas small {
     font-size: 12px;
     color: grey;
     padding: 8px;
+    border: none;
     }
 
 .nad-sekcja-o-nas {
@@ -192,6 +211,8 @@ form div {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    border: none;
+
 }
 
 .o-nas li{
@@ -210,10 +231,11 @@ form div {
 
 #o-nas {
     background-color: #d3caa3;
-    margin: 0;
+    background: linear-gradient(#d3caa3, #d3cb73);
     text-align: center;
     font-family: "Francois One", sans-serif;
     padding-top: 1px;
+    margin-bottom: 0;
 }
 
 .o-teamie-naglowek {
@@ -234,4 +256,34 @@ form div {
 
 .informacje-o-michale-k {
     background-image: url("../images/michal-k-zdjecie-zespolu.png");
+}
+
+#funkcjonalnosci li:last-child:after, #main-menu li:last-child:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+
+
+.logo-stopki {
+    height: 50px;
+    background-image: url(../images/logo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 20px;
+}
+
+footer{
+    text-align: center;
+    font-family: 'Francois One', sans-serif;
+}
+
+.mail-stopka {
+    padding-bottom: 10px;
+}
+
+.wszelakie-wszelakosci-stopkowe * {
+    display: inline-block;
 }
