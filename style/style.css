@@ -156,7 +156,6 @@ body {
     }
 }
 
-
 #dolacz-do-nas input {
     font-size: 24px;
 
@@ -264,8 +263,6 @@ body {
     content: '';
 }
 
-
-
 .logo-stopki {
     height: 50px;
     background-image: url(../images/logo.png);
@@ -274,14 +271,14 @@ body {
     background-repeat: no-repeat;
     margin: 20px;
 }
-
 footer{
     text-align: center;
     font-family: 'Francois One', sans-serif;
 }
-
 .mail-stopka {
     padding-bottom: 10px;
+    text-decoration: none;
+    color: black;
 }
 
 .wszelakie-wszelakosci-stopkowe * {
