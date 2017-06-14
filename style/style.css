@@ -91,6 +91,8 @@ body {
 
 .funkcjonalnosci {
     padding-top: 63px;
+    padding-bottom: 63px;
+    padding-left: 0;
     text-align: center;
     font-size: 22px;
 }
@@ -127,9 +129,18 @@ body {
 }
 
 .przerywnik {
-    background-color: #d3caa3;
-    background: linear-gradient(#d3caa3, #d3cb73);
-    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+}
+
+.przerywnik div {
+    background-color: #b543a0;
+    /*background: linear-gradient(#d3caa3, #d3cb73);*/
+    height: 3px;
+    width: 1200px;
+    border: 1px;
+    border-radius: 90px;
 }
 
 #dolacz-do-nas {
