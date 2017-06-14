@@ -5,26 +5,25 @@
     min-height: 100vh;
     background-position: center 63px;
     width: 100%;
-    /*margin-top: 1px;*/
     background-attachment: fixed;
     display: flex;
-    display: -webkit-flex;
     -webkit-justify-content: center;
     justify-content: center;
     align-items: center;
     -webkit-align-items: center;
 }
+
 .header-zajawka {
     width: 350px;
     height: auto;
 }
 
-#main-header{
+#main-header {
     min-height: 50px;
 }
 
 section {
-     margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .zajawka h1 {
@@ -32,7 +31,7 @@ section {
     color: black;
     font-size: 34px;
     font-weight: 300;
-   }
+}
 
 .zajawka h2 {
     font-family: 'Francois One', sans-serif;
@@ -42,7 +41,7 @@ section {
 }
 
 #main-menu {
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     font-family: 'Francois One', sans-serif;
     font-weight: 400;
     text-align: center;
@@ -52,10 +51,6 @@ section {
     right: 0;
     z-index: 100;
     width: 100%;
-}
-
-.clear {
-    clear: both;
 }
 
 .menu li {
@@ -131,6 +126,12 @@ body {
     background-image: url("../images/ikona-planu.png");
 }
 
+.przerywnik {
+    background-color: #d3caa3;
+    background: linear-gradient(#d3caa3, #d3cb73);
+    height: 200px;
+}
+
 #dolacz-do-nas {
     text-align: center;
     display: block;
@@ -148,7 +149,7 @@ body {
 
 @media screen and (max-width: 900px) {
     #dolacz-do-nas {
-      width: 500px;
+        width: 500px;
         padding-left: 0;
         padding-top: 100px;
         background-position: center 20px;
@@ -160,12 +161,14 @@ body {
     font-size: 24px;
 
 }
+
 .input-email {
     width: 380px;
     padding: 9px;
     border-radius: 5px;
     border: 1px solid #ddd;
 }
+
 .button {
     border-radius: 5px;
     background-color: #b543a0;
@@ -187,21 +190,24 @@ body {
     font-weight: 100;
     text-align: center;
 }
+
 #dolacz-do-nas header h2 {
     font-family: 'Francois One', sans-serif;
     font-size: 20px;
     font-weight: 100;
     text-align: center;
 }
+
 .dolacz-do-nas fieldset {
     border: none;
 }
+
 .dolacz-do-nas small {
     font-size: 12px;
     color: grey;
     padding: 8px;
     border: none;
-    }
+}
 
 .nad-sekcja-o-nas {
     width: auto;
@@ -214,7 +220,7 @@ body {
 
 }
 
-.o-nas li{
+.o-nas li {
     display: inline-block;
     width: 250px;
     height: 50px;
@@ -241,7 +247,8 @@ body {
     text-align: center;
     font-family: "Francois One", sans-serif;
 }
-.informacje-o-dominice{
+
+.informacje-o-dominice {
     background-image: url("../images/dominika-zdjecie-zespolu.png");
 }
 
@@ -271,10 +278,12 @@ body {
     background-repeat: no-repeat;
     margin: 20px;
 }
-footer{
+
+footer {
     text-align: center;
     font-family: 'Francois One', sans-serif;
 }
+
 .mail-stopka {
     padding-bottom: 10px;
     text-decoration: none;
