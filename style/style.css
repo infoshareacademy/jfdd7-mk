@@ -177,15 +177,6 @@ body {
     margin: 0 auto;
 }
 
-@media screen and (max-width: 900px) {
-    #dolacz-do-nas {
-        max-width: 500px;
-        padding-left: 0;
-        padding-top: 100px;
-        background-position: center 20px;
-
-    }
-}
 
 .dolacz-do-nas input {
     font-size: 1.1em;
@@ -213,6 +204,7 @@ body {
 .button:hover {
     background-color: #bd5dac;
 }
+
 
 .dolacz-do-nas header h1 {
     font-family: 'Francois One', sans-serif;
@@ -277,6 +269,7 @@ body {
     padding-left: 0;
 }
 .o-teamie-naglowek {
+    margin-top: 75px;
     text-align: center;
     font-family: "Francois One", sans-serif;
 }
@@ -346,14 +339,22 @@ footer * {
     .zajawka {
         min-height: 75vh;
     }
+    #dolacz-do-nas {
+        max-width: 500px;
+        padding-left: 0;
+        padding-top: 150px;
+        background-position: center 65px;
+
+    }
 
 
 }
 /*ustawienia dla tabletu*/
-@media screen and (min-width: 768px) and (max-width: 991px){
+@media screen and (min-width: 768px) and (max-width: 991px) {
     body {
         font-size: 18px;
     }
+
     .zajawka {
         background-size: contain;
         min-height: 50vh;
@@ -370,5 +371,13 @@ footer * {
 
     .header-zajawka {
         max-width: 296px;
+    }
+
+    #dolacz-do-nas {
+        max-width: 500px;
+        padding-left: 0;
+        padding-top: 150px;
+        background-position: center 65px;
+
     }
 }
