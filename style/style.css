@@ -157,7 +157,7 @@ body {
     background-color: #b543a0;
     /*background: linear-gradient(#d3caa3, #d3cb73);*/
     height: 3px;
-    width: 1200px;
+    width: 80%;
     border: 1px;
     border-radius: 90px;
 }
@@ -358,5 +358,17 @@ footer * {
         background-size: contain;
         min-height: 50vh;
         background-position: center 55px;
+    }
+
+    .zajawha h1 {
+        font-size: 1.3em;
+    }
+
+    .zajawha h2 {
+        font-size: 1.5em;
+    }
+
+    .header-zajawka {
+        max-width: 296px;
     }
 }
