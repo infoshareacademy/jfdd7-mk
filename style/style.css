@@ -344,9 +344,10 @@ footer * {
         padding-left: 0;
         padding-top: 150px;
         background-position: center 65px;
-
     }
-
+    .menu li {
+        padding-bottom: 4px;
+    }
 
 }
 /*ustawienia dla tabletu*/
