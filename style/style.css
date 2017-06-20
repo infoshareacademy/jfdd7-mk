@@ -163,14 +163,14 @@ body {
 }
 
 .dolacz-do-nas {
-    text-align: center;
+    text-align: left;
     display: block;
     font-family: 'Francois One', sans-serif;
-    padding-left: 100px;
+    padding-left: 150px;
     padding-top: 63px;
     padding-bottom: 63px;
     background-image: url("../images/ikona-koperty.png");
-    background-position: left center;
+    background-position: left 97px;
     background-size: 120px auto;
     background-repeat: no-repeat;
     max-width: 700px;
@@ -222,6 +222,7 @@ body {
 
 .dolacz-do-nas fieldset {
     border: none;
+    padding-left: 0;
 }
 
 .dolacz-do-nas small {
@@ -229,6 +230,8 @@ body {
     color: grey;
     padding: 8px;
     border: none;
+    text-align: left;
+    padding-left: 0;
 }
 
 .nad-sekcja-o-nas {
@@ -344,6 +347,7 @@ footer * {
         padding-left: 0;
         padding-top: 150px;
         background-position: center 65px;
+        text-align: center;
 
     }
 
@@ -378,6 +382,12 @@ footer * {
         padding-left: 0;
         padding-top: 150px;
         background-position: center 65px;
-
+        text-align: center;
+    }
+    .dolacz-do-nas fieldset{
+        padding-left: 13.5px;
+    }
+    .dolacz-do-nas small {
+        padding-left: 8px;
     }
 }
