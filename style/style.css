@@ -177,6 +177,15 @@ body {
     margin: 0 auto;
 }
 
+@media screen and (max-width: 900px) {
+    #dolacz-do-nas {
+        max-width: 500px;
+        padding-left: 0;
+        padding-top: 100px;
+        background-position: center 20px;
+
+    }
+}
 
 .dolacz-do-nas input {
     font-size: 1.1em;
@@ -204,7 +213,6 @@ body {
 .button:hover {
     background-color: #bd5dac;
 }
-
 
 .dolacz-do-nas header h1 {
     font-family: 'Francois One', sans-serif;
@@ -262,14 +270,13 @@ body {
     background: linear-gradient(#d3caa3, #d3cb73);
     text-align: center;
     font-family: "Francois One", sans-serif;
-    padding-top: 1px;
+    padding-top: 63px;
     margin-bottom: 0;
 }
 .o-nas ul {
     padding-left: 0;
 }
 .o-teamie-naglowek {
-    margin-top: 75px;
     text-align: center;
     font-family: "Francois One", sans-serif;
 }
@@ -320,9 +327,7 @@ footer * {
     display: inline-block;
 }
 
-.o-nas {
-    margin-bottom: 0;
-}
+
 /*ustawienia dla telefonu*/
 @media screen and (max-width:767px) {
     body {
@@ -339,23 +344,14 @@ footer * {
     .zajawka {
         min-height: 75vh;
     }
-    #dolacz-do-nas {
-        max-width: 500px;
-        padding-left: 0;
-        padding-top: 150px;
-        background-position: center 65px;
-    }
-    .menu li {
-        padding-bottom: 4px;
-    }
+
 
 }
 /*ustawienia dla tabletu*/
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px){
     body {
         font-size: 18px;
     }
-
     .zajawka {
         background-size: contain;
         min-height: 50vh;
@@ -372,13 +368,5 @@ footer * {
 
     .header-zajawka {
         max-width: 296px;
-    }
-
-    #dolacz-do-nas {
-        max-width: 500px;
-        padding-left: 0;
-        padding-top: 150px;
-        background-position: center 65px;
-
     }
 }
