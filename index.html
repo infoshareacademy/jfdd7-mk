@@ -53,8 +53,10 @@
             </small>
 
         </form>
-
     </section>
+    <div id="game" class="game">
+        <div id="button-start" class="button-start">Start</div>
+    </div>
     <div class="nad-sekcja-o-nas">
     </div>
 
@@ -76,6 +78,11 @@
     </div>
 </footer>
 <script src="jquery-3.2.1.min.js"></script>
+<script>
+    $('#button-start').click(function() {
+        $('div.button-start').toggleClass('hidden');
+    });
+</script>
 </body>
 <script>
      $(document).on('click', 'a', function(event) {
