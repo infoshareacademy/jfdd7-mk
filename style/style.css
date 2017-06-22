@@ -332,8 +332,9 @@ footer * {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin: 0 auto;
     min-height: 300px;
-    min-width: 800px;
+
     max-width: 1200px;
 
 }
