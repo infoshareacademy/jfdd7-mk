@@ -55,8 +55,10 @@
         </form>
     </section>
     <div id="game" class="game">
+        <div class="cover"></div>
         <div id="button-start" class="button-start">Start</div>
     </div>
+
     <div class="nad-sekcja-o-nas">
     </div>
 
@@ -79,9 +81,7 @@
 </footer>
 <script src="jquery-3.2.1.min.js"></script>
 <script>
-    $('#button-start').click(function() {
-        $('div.button-start').toggleClass('hidden');
-    });
+
 </script>
 </body>
 <script>
@@ -92,7 +92,18 @@
         },750);
     });
 //     przewijanie tła
+     $(document).on('click', '.button-start', (function(){
+         var x = 0;
+         setInterval(function(){
+             x-=1;
+             $('.game').css('background-position', x + 'px 0');
+         }, 10);
+     }));
 
+//    start gry
+     $('#button-start').click(function() {
+         $('div.button-start, div.cover').toggleClass('hidden');
+     });
 
 </script>
 </html>
