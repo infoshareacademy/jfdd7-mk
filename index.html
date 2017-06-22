@@ -7,12 +7,13 @@
     <link href="https://fonts.googleapis.com/css?family=Francois+One|Ubuntu+Condensed" rel="stylesheet">
     <meta name="viewport" content="wdth=device-width, initial-scale=1">
 <body>
+<div id="gora"></div>
 <header id="home" class="main-header">
     <a href="#" class="logo container"><img src="images/logo-nowe.png"> </a>
 
     <nav class="main-menu">
         <ul class="menu">
-            <li><a href="#">HOME</a></li>
+            <li><a href="#gora">HOME</a></li>
             <li><a href="#funkcjonalnosci">O APLIKACJI</a></li>
             <li><a href="#dolacz-do-nas">DOŁĄCZ DO NAS</a></li>
             <li><a href="#o-nas">O NAS</a></li>
@@ -53,8 +54,10 @@
             </small>
 
         </form>
-
     </section>
+    <div id="game" class="game">
+        <div id="button-start" class="button-start">Start</div>
+    </div>
     <div class="nad-sekcja-o-nas">
     </div>
 
@@ -76,6 +79,36 @@
     </div>
 </footer>
 <script src="jquery-3.2.1.min.js"></script>
+<script>
+    $('#button-start').click(function() {
+        $('div.button-start').toggleClass('hidden');
+    });
+</script>
+<script>
+//    $(document).on('click', 'a', function(event) {
+//        event.preventDefault();
+//        $('body').animate({
+//            scrollTop: $($.attr(this, 'href')).offset().top
+//        },750);
+//    });
+    //     przewijanie tła
+
+$(document).ready(function() {
+
+    $('a[href^="#"]').on('click', function(event) {
+
+        var target = $( $(this).attr('href') );
+
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 500);
+        }
+    });
+
+});
+</script>
 </body>
 </html>
 
