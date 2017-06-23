@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Gdzie poćwiczę?</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style/style.css">
+
     <link href="https://fonts.googleapis.com/css?family=Francois+One|Ubuntu+Condensed" rel="stylesheet">
     <meta name="viewport" content="wdth=device-width, initial-scale=1">
 <body>
@@ -23,9 +25,11 @@
 </header>
 <main>
     <header class="zajawka">
+        <figure class="phone img-responsive"> </figure>
         <div class="header-zajawka">
-            <h1>Nie wiesz gdzie poćwiczyć?</h1>
-            <h2>Dzięki naszej aplikacji nigdy nie zabraknie Ci miejsc ani pomysłów na trening!</h2>
+            <div class="row"><h1 class="col-sm-offset-2 col-sm-8">Nie wiesz gdzie poćwiczyć?</h1></div>
+            <div class="row"><h2 class="col-sm-offset-2 col-sm-8">Dzięki naszej aplikacji nigdy nie zabraknie Ci miejsc ani pomysłów na trening!</h2></div>
+
         </div>
     </header>
 
@@ -111,6 +115,14 @@
      $('#button-start').click(function() {
          $('div.button-start, div.cover').toggleClass('hidden');
      });
+     //parallax
+    $(window).scroll(function () {
+        var phone=$(".phone");
+        var offset=$(this).scrollTop();
+        phone.css("background-position-y",offset/1.5);})
+
+
+
 
 </script>
 </body>
