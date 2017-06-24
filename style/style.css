@@ -75,9 +75,24 @@ body {
     margin-left: 10px;
     margin-right: 10px;
 }
+.parallax-viewporrt img {
 
+}
+.phone{
+    position: absolute;
+    background: url("../images/reka-z-telefonem.png");
+    background-size: contain;
+    z-index: 0;
+    width: 70%;
+    height: 70%;
+    background-repeat: no-repeat;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+}
 .zajawka {
     background-image: url(../images/header.jpg);
+    position: relative;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -94,6 +109,7 @@ body {
 .header-zajawka {
     width: 350px;
     height: auto;
+
 }
 
 .zajawka h1 {
@@ -273,7 +289,7 @@ body {
     padding-left: 0;
 }
 .o-teamie-naglowek {
-    margin-top: 75px;
+    /*margin-top: 75px;*/
     text-align: center;
     font-family: "Francois One", sans-serif;
 }
@@ -365,12 +381,18 @@ footer * {
 .hidden {
     display: none
 }
+.transparent {
+    opacity: 0;
+}
+.translucent {
+    opacity: 0.8;
+}
 .cover {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.8);
-    z-index: 0;
+    background-color: white;
+    transition: opacity 1s ease-in-out;
 }
 /*ustawienia dla telefonu*/
 @media screen and (max-width:767px) {

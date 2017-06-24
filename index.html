@@ -23,9 +23,11 @@
 </header>
 <main>
     <header class="zajawka">
+        <figure class="phone img-responsive"> </figure>
         <div class="header-zajawka">
-            <h1>Nie wiesz gdzie poćwiczyć?</h1>
-            <h2>Dzięki naszej aplikacji nigdy nie zabraknie Ci miejsc ani pomysłów na trening!</h2>
+            <div><h1>Nie wiesz gdzie poćwiczyć?</h1></div>
+            <div><h2>Dzięki naszej aplikacji nigdy nie zabraknie Ci miejsc ani pomysłów na trening!</h2></div>
+
         </div>
     </header>
 
@@ -56,7 +58,7 @@
         </form>
     </section>
     <div id="game" class="game">
-        <div class="cover"></div>
+        <div class="cover translucent"></div>
         <div id="button-start" class="button-start">Start</div>
     </div>
     <div class="nad-sekcja-o-nas">
@@ -99,18 +101,34 @@
 //     przewijanie tła gry
      $(document).on('click', '.button-start', (function(){
          var x = 0;
-         setInterval(function(){
-             x-=1;
-             $('.game').css('background-position', x + 'px 0');
-         }, 10);
+         var intervalId;
+         setTimeout(function () {
+             intervalId = setInterval(function(){
+                 x-=1;
+                 $('.game').css('background-position', x + 'px 0');
+             }, 10);
+             setTimeout(function () {
+                 clearInterval(intervalId);
+             }, 15000)
+         }, 500);
+
      }));
 
     });
     // przewija do odpowiedniej sekcji
 //    start gry
      $('#button-start').click(function() {
-         $('div.button-start, div.cover').toggleClass('hidden');
+         $('div.cover').addClass('transparent').removeClass('translucent');
+         $('div.button-start').remove();
      });
+     //parallax
+    $(window).scroll(function () {
+        var phone=$(".phone");
+        var offset=$(this).scrollTop();
+        phone.css("background-position-y",offset/1.5);})
+
+
+
 
 </script>
 </body>
