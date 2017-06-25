@@ -10,7 +10,6 @@
 <div id="gora"></div>
 <header id="home" class="main-header">
     <a href="#gora" class="logo container"><img src="images/logo-nowe.png"> </a>
-
     <nav class="main-menu">
         <ul class="menu">
             <li><a href="#gora">HOME</a></li>
@@ -24,13 +23,12 @@
 <main>
     <header class="zajawka">
         <figure class="phone img-responsive"> </figure>
+        <figure class="woman img-responsive"> </figure>
         <div class="header-zajawka">
             <div><h1>Nie wiesz gdzie poćwiczyć?</h1></div>
             <div><h2>Dzięki naszej aplikacji nigdy nie zabraknie Ci miejsc ani pomysłów na trening!</h2></div>
-
         </div>
     </header>
-
     <section id="funkcjonalnosci">
         <ul class="funkcjonalnosci">
             <li class="funkcja-mapa">Mapa obiektów niedaleko Ciebie</li>
@@ -42,11 +40,10 @@
     <section class="przerywnik">
         <div></div>
     </section>
-
     <section id="dolacz-do-nas" class="dolacz-do-nas">
         <h1>Chcesz zacząć ćwiczyć razem z nami?</h1>
         <h2>Wypełnij formularz, aby dowiedzieć się więcej o naszej aplikacji!</h2>
-        <form target="_blank" action="https://formspree.io/gdziepocwicze@gmail.com" method="post">
+        <form action="https://formspree.io/gdziepocwicze@gmail.com" method="post">
             <fieldset>
                 <input class="input-email" type="email" name="email" placeholder="mail@mail.com" required="required">
                 <input class="button" type="submit" name="submit" value="Wyślij">
@@ -125,11 +122,11 @@
     $(window).scroll(function () {
         var phone=$(".phone");
         var offset=$(this).scrollTop();
-        phone.css("background-position-y",offset/1.5);})
-
-
-
-
+        phone.css("background-position-y",offset/1.9);})
+    $(window).scroll(function () {
+        var woman=$(".woman");
+        var offset=$(this).scrollTop();
+        woman.css("background-position-y",offset/1.9);})
 </script>
 </body>
 </html>
