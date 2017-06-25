@@ -33,10 +33,10 @@
 
     <section id="funkcjonalnosci">
         <ul class="funkcjonalnosci">
-            <li class="funkcja-mapa">Mapa obiektów niedaleko Ciebie</li>
-            <li class="funkcja-info-o-obiekcie">Szczegółowe informacje o porządanym przez Ciebie miejscu</li>
-            <li class="funkcja-trener">Znajdź z nami swojego trenera</li>
-            <li class="funkcja-plan">Wolisz sam? Znajdź odpowiedni plan treningowy u nas</li>
+            <li class="funkcja-mapa revealed">Mapa obiektów niedaleko Ciebie</li>
+            <li class="funkcja-info-o-obiekcie revealed">Szczegółowe informacje o porządanym przez Ciebie miejscu</li>
+            <li class="funkcja-trener revealed">Znajdź z nami swojego trenera</li>
+            <li class="funkcja-plan revealed">Wolisz sam? Znajdź odpowiedni plan treningowy u nas</li>
         </ul>
     </section>
     <section class="przerywnik">
@@ -82,6 +82,7 @@
     </div>
 </footer>
 <script src="jquery-3.2.1.min.js"></script>
+<script src="scrollreveal.min.js"></script>
 
 <script>
     $(document).ready(function() {
@@ -125,11 +126,19 @@
     $(window).scroll(function () {
         var phone=$(".phone");
         var offset=$(this).scrollTop();
-        phone.css("background-position-y",offset/1.5);})
+        phone.css("background-position-y",offset/1.5);});
 
 
+// pojawianie się elementow na stronie
 
+    window.sr = ScrollReveal();
+    sr.reveal('.revealed', {
+        reset: false,
+        delay: 300,
+        rotate: {x: 65, y: 65},
+        scale: 0.5
 
+    });
 </script>
 </body>
 </html>
