@@ -114,7 +114,9 @@
              }, 15000)
          }, 500);
 
-         $(".hero").animate({top bottom: '10px'});
+         $(".hero").animate({top: '-=50px'}, 100, function() {
+             $(this).animate({top: '+=50px'}, 100)
+         });
 
      }));
 
