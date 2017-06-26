@@ -46,7 +46,7 @@
         <form target="_blank" action="https://formspree.io/gdziepocwicze@gmail.com" method="post">
             <fieldset>
                 <input class="input-email" type="email" name="email" placeholder="mail@mail.com" required="required">
-                <input class="button" type="submit" name="submit" value="Wyślij">
+                <input class="button submit" type="submit" name="submit" value="Wyślij">
             </fieldset>
             <small>Gwarantujemy, że po dołączeniu do naszej aplikacji,
                 otrzymasz jeden mail z informacją o dacie jej premiery.
@@ -57,6 +57,7 @@
     <div id="game" class="game">
         <div class="cover translucent"></div>
         <div id="button-start" class="button-start">Start</div>
+        <div class="hero" style="top: 157px"></div>
     </div>
     <div class="nad-sekcja-o-nas">
     </div>
@@ -96,29 +97,69 @@
             }
         });
 
-//     przewijanie tła gry
-     $(document).on('click', '.button-start', (function(){
-         var x = 0;
-         var intervalId;
-         setTimeout(function () {
-             intervalId = setInterval(function(){
-                 x-=1;
-                 $('.game').css('background-position', x + 'px 0');
-             }, 10);
-             setTimeout(function () {
-                 clearInterval(intervalId);
-             }, 15000)
-         }, 500);
+        $('form').on('submit', function () {
+            $('#dolacz-do-nas').slideUp();
+            $('#game').removeClass('hidden');
+        });
 
-     }));
+        var gra = function () {
+            this.idGry = 0;
+            this.naZiemi = true;
+            this.opoznienieStartu = 500;
+            this.czasGry = 15000;
+            this.predkoscPrzewijania = 10;
+
+            this.startGry = function () {
+                var x = 0;
+                var self = this;
+                $('div.cover').removeClass('translucent').addClass('transparent');
+                $('div.button-start').remove();
+                setTimeout(function () {
+                    self.idGry = setInterval(function () {
+                        x -= 1;
+                        $('.game').css('background-position', x + 'px 0');
+                    }, self.predkoscPrzewijania);
+
+                    setTimeout(function () {
+                        self.koniecGry()
+                    }, self.czasGry);
+                }, this.opoznienieStartu);
+            };
+
+            this.koniecGry = function () {
+                clearInterval(this.idGry);
+            };
+
+            this.skokGracza = function () {
+                var skok = '150px';
+                var self = this;
+                if (this.naZiemi && this.idGry > 0) {
+                    this.naZiemi = false;
+                    $(".hero").animate({top: '-=' + skok}, 200, function () {
+                        $(this).animate({top: '+=' + skok}, 200, function () {
+                            self.naZiemi = true;
+                        })
+                    });
+                }
+            };
+
+            this.init = function () {
+                var self = this;
+                $(document).on('click', '.button-start', function(){
+                    self.startGry();
+                });
+                $(document).on('mousedown', '#game', function(){
+                    self.skokGracza();
+                });
+            };
+
+            this.init();
+        };
+        var nowaGra = new gra();
 
     });
     // przewija do odpowiedniej sekcji
-//    start gry
-     $('#button-start').click(function() {
-         $('div.cover').addClass('transparent').removeClass('translucent');
-         $('div.button-start').remove();
-     });
+
      //parallax
     $(window).scroll(function () {
         var phone=$(".phone");
