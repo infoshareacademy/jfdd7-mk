@@ -10,7 +10,6 @@
 <div id="gora"></div>
 <header id="home" class="main-header">
     <a href="#gora" class="logo container"><img src="images/logo-nowe.png"> </a>
-
     <nav class="main-menu">
         <ul class="menu">
             <li><a href="#gora">HOME</a></li>
@@ -23,28 +22,28 @@
 </header>
 <main>
     <header class="zajawka">
+        <figure class="phone img-responsive"> </figure>
+        <figure class="woman img-responsive"> </figure>
         <div class="header-zajawka">
-            <h1>Nie wiesz gdzie poćwiczyć?</h1>
-            <h2>Dzięki naszej aplikacji nigdy nie zabraknie Ci miejsc ani pomysłów na trening!</h2>
+            <div><h1>Nie wiesz gdzie poćwiczyć?</h1></div>
+            <div><h2>Dzięki naszej aplikacji nigdy nie zabraknie Ci miejsc ani pomysłów na trening!</h2></div>
         </div>
     </header>
-
     <section id="funkcjonalnosci">
         <ul class="funkcjonalnosci">
-            <li class="funkcja-mapa">Mapa obiektów niedaleko Ciebie</li>
-            <li class="funkcja-info-o-obiekcie">Szczegółowe informacje o porządanym przez Ciebie miejscu</li>
-            <li class="funkcja-trener">Znajdź z nami swojego trenera</li>
-            <li class="funkcja-plan">Wolisz sam? Znajdź odpowiedni plan treningowy u nas</li>
+            <li class="funkcja-mapa revealed">Mapa obiektów niedaleko Ciebie</li>
+            <li class="funkcja-info-o-obiekcie revealed">Szczegółowe informacje o porządanym przez Ciebie miejscu</li>
+            <li class="funkcja-trener revealed">Znajdź z nami swojego trenera</li>
+            <li class="funkcja-plan revealed">Wolisz sam? Znajdź odpowiedni plan treningowy u nas</li>
         </ul>
     </section>
     <section class="przerywnik">
         <div></div>
     </section>
-
     <section id="dolacz-do-nas" class="dolacz-do-nas">
         <h1>Chcesz zacząć ćwiczyć razem z nami?</h1>
         <h2>Wypełnij formularz, aby dowiedzieć się więcej o naszej aplikacji!</h2>
-        <form action="https://formspree.io/gdziepocwicze@gmail.com" method="post">
+        <form target="_blank" action="https://formspree.io/gdziepocwicze@gmail.com" method="post">
             <fieldset>
                 <input class="input-email" type="email" name="email" placeholder="mail@mail.com" required="required">
                 <input class="button" type="submit" name="submit" value="Wyślij">
@@ -56,7 +55,7 @@
         </form>
     </section>
     <div id="game" class="game">
-        <div class="cover"></div>
+        <div class="cover translucent"></div>
         <div id="button-start" class="button-start">Start</div>
     </div>
     <div class="nad-sekcja-o-nas">
@@ -80,6 +79,7 @@
     </div>
 </footer>
 <script src="jquery-3.2.1.min.js"></script>
+<script src="scrollreveal.min.js"></script>
 
 <script>
     $(document).ready(function() {
@@ -99,18 +99,46 @@
 //     przewijanie tła gry
      $(document).on('click', '.button-start', (function(){
          var x = 0;
-         setInterval(function(){
-             x-=1;
-             $('.game').css('background-position', x + 'px 0');
-         }, 10);
+         var intervalId;
+         setTimeout(function () {
+             intervalId = setInterval(function(){
+                 x-=1;
+                 $('.game').css('background-position', x + 'px 0');
+             }, 10);
+             setTimeout(function () {
+                 clearInterval(intervalId);
+             }, 15000)
+         }, 500);
+
      }));
 
     });
     // przewija do odpowiedniej sekcji
 //    start gry
      $('#button-start').click(function() {
-         $('div.button-start, div.cover').toggleClass('hidden');
+         $('div.cover').addClass('transparent').removeClass('translucent');
+         $('div.button-start').remove();
      });
+     //parallax
+    $(window).scroll(function () {
+        var phone=$(".phone");
+        var offset=$(this).scrollTop();
+        phone.css("background-position-y",offset/1.9);})
+    $(window).scroll(function () {
+        var woman=$(".woman");
+        var offset=$(this).scrollTop();
+        woman.css("background-position-y",offset/1.9);})
+
+// pojawianie się elementow na stronie
+
+    window.sr = ScrollReveal();
+    sr.reveal('.revealed', {
+        reset: false,
+        delay: 300,
+        rotate: {x: 65, y: 65},
+        scale: 0.5
+
+    });
 
 </script>
 </body>
