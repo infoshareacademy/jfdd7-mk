@@ -57,6 +57,7 @@
     <div id="game" class="game">
         <div class="cover translucent"></div>
         <div id="button-start" class="button-start">Start</div>
+        <div class="space"> </div>
     </div>
     <div class="nad-sekcja-o-nas">
     </div>
@@ -97,29 +98,31 @@
         });
 
 //     przewijanie tła gry
-     $(document).on('click', '.button-start', (function(){
-         var x = 0;
-         var intervalId;
-         setTimeout(function () {
-             intervalId = setInterval(function(){
-                 x-=1;
-                 $('.game').css('background-position', x + 'px 0');
-             }, 10);
-             setTimeout(function () {
-                 clearInterval(intervalId);
-             }, 15000)
-         }, 500);
+        $(document).on('click', '.button-start', (function(){
+            var x = 0;
+            var intervalId;
+            setTimeout(function () {
+                intervalId = setInterval(function(){
+                    x-=1;
+                    $('.game').css('background-position', x + 'px 0');
+                }, 10);
+                setTimeout(function () {
+                    clearInterval(intervalId);
+                }, 15000)
+            }, 500);
 
-     }));
+            $('.space').animate({top: '650px'});
+
+        }));
 
     });
     // przewija do odpowiedniej sekcji
-//    start gry
-     $('#button-start').click(function() {
-         $('div.cover').addClass('transparent').removeClass('translucent');
-         $('div.button-start').remove();
-     });
-     //parallax
+    //    start gry
+    $('#button-start').click(function() {
+        $('div.cover').addClass('transparent').removeClass('translucent');
+        $('div.button-start').remove();
+    });
+    //parallax
     $(window).scroll(function () {
         var phone=$(".phone");
         var offset=$(this).scrollTop();
@@ -129,7 +132,7 @@
         var offset=$(this).scrollTop();
         woman.css("background-position-y",offset/1.7);});
 
-// pojawianie się elementow na stronie
+    // pojawianie się elementow na stronie
 
     window.sr = ScrollReveal();
     sr.reveal('.revealed', {
