@@ -22,8 +22,8 @@
 </header>
 <main>
     <header class="zajawka">
-        <figure class="phone img-responsive"> </figure>
-        <figure class="woman img-responsive"> </figure>
+        <figure class="phone"> </figure>
+        <figure class="woman"> </figure>
         <div class="header-zajawka">
             <div><h1>Nie wiesz gdzie poćwiczyć?</h1></div>
             <div><h2>Dzięki naszej aplikacji nigdy nie zabraknie Ci miejsc ani pomysłów na trening!</h2></div>
@@ -123,22 +123,24 @@
     $(window).scroll(function () {
         var phone=$(".phone");
         var offset=$(this).scrollTop();
-        phone.css("background-position-y",offset/1.9);})
+        phone.css("background-position-y",offset/1.9);});
     $(window).scroll(function () {
         var woman=$(".woman");
         var offset=$(this).scrollTop();
-        woman.css("background-position-y",offset/1.9);})
+        woman.css("background-position-y",offset/1.7);});
 
 // pojawianie się elementow na stronie
 
     window.sr = ScrollReveal();
     sr.reveal('.revealed', {
         reset: false,
-        delay: 300,
+        delay: 500,
         rotate: {x: 65, y: 65},
-        scale: 0.5
-
+        scale: 0.5,
+        duration: 500,
+        origin: "bottom"
     });
+
 
 </script>
 </body>
