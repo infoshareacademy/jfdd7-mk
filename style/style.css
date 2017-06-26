@@ -75,8 +75,6 @@ body {
     margin-left: 10px;
     margin-right: 10px;
 }
-.parallax-viewporrt img {
-}
 
 .phone{
     background-position: center left;
@@ -106,6 +104,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 
 .zajawka {
     background-image: url(../images/samo-tlo.jpg);
@@ -449,6 +448,13 @@ footer * {
 
     }
 
+    .menu li {
+        padding-bottom: 4px;
+    }
+    .phone, .woman {
+        display: none;
+    }
+
 
 }
 /*ustawienia dla tabletu*/
@@ -486,5 +492,8 @@ footer * {
     }
     .dolacz-do-nas small {
         padding-left: 8px;
+    }
+   .phone {
+        display: none;
     }
 }
