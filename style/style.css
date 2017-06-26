@@ -121,6 +121,7 @@ body {
     justify-content: center;
     align-items: center;
     -webkit-align-items: center;
+    position: relative;
 }
 
 #title {
@@ -318,6 +319,16 @@ body {
 .o-nas ul {
     padding-left: 0;
 }
+
+.hero {
+
+    background-image: url("../images/postac-ground.png");
+    height:100%;
+    width:100%;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
 .o-teamie-naglowek {
     /*margin-top: 75px;*/
     text-align: center;
@@ -387,6 +398,15 @@ footer * {
     max-width: 1200px;
 
 }
+
+.rekaztelefonem {
+    min-width: 609px;
+    min-height: 669px;
+    background: url("../images/reka-z-telefonem.png");
+    background-repeat: no-repeat;
+    position: absolute ;
+    }
+
 .button-start {
     display: flex;
     align-items: center;
@@ -448,7 +468,9 @@ footer * {
         text-align: center;
 
     }
-
+    .menu li {
+        padding-bottom: 4px;
+    }
 
 }
 /*ustawienia dla tabletu*/
