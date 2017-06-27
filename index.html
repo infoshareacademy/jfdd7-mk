@@ -158,8 +158,11 @@
                 $(document).on('click', '.button-start', function(){
                     self.startGry();
                 });
-                $(document).on('mousedown', '#game', function(){
-                    self.skokGracza();
+                $(document).on('keydown', function(event){
+                    if (event.keyCode === 38 || event.keyCode === 32) {
+                        self.skokGracza();
+                        event.preventDefault();
+                    }
                 });
             };
 
