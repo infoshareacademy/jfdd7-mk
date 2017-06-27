@@ -326,7 +326,17 @@ body {
     width:100%;
     position: absolute;
     background-repeat: no-repeat;
-    top: 157px
+    top: 157px;
+    display: none;
+}
+.jump {
+    background-image: url("../images/postac-air.png");
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 140px;
+    display: none;
 }
 .shadow {
     background-image: url("../images/postac-shadow.png");
@@ -336,6 +346,7 @@ body {
     background-repeat: no-repeat;
     top: 316px;
     left: 40px;
+    display: none;
 }
 
 .o-teamie-naglowek {

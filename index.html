@@ -58,6 +58,7 @@
         <div class="cover translucent"></div>
         <div id="button-start" class="button-start">Start</div>
         <div class="hero"></div>
+        <div class="jump"></div>
         <div class="shadow"></div>
     </div>
     <div class="nad-sekcja-o-nas">
@@ -113,6 +114,7 @@
             this.startGry = function () {
                 var x = 0;
                 var self = this;
+                $('.hero, .shadow').show();
                 $('div.cover').removeClass('translucent').addClass('transparent');
                 $('div.button-start').remove();
                 setTimeout(function () {
@@ -136,13 +138,20 @@
                 var self = this;
                 if (this.naZiemi && this.idGry > 0) {
                     this.naZiemi = false;
-                    $(".hero").animate({top: '-=' + skok}, 200, function () {
+                    $(".hero").hide(0);
+                    $('.jump').show(0);
+
+                    $(".jump").animate({top: '-=' + skok}, 200, function () {
                         $(this).animate({top: '+=' + skok}, 200, function () {
                             self.naZiemi = true;
+                            $(".hero").show(0);
+                            $('.jump').hide(0);
                         })
                     });
-                }
-            };
+
+
+                    }
+                };
 
             this.init = function () {
                 var self = this;
