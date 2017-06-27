@@ -22,8 +22,8 @@
 </header>
 <main>
     <header class="zajawka">
-        <figure class="phone"> </figure>
-        <figure class="woman"> </figure>
+        <figure class="phone"></figure>
+        <figure class="woman"></figure>
         <div class="header-zajawka">
             <div><h1>Nie wiesz gdzie poćwiczyć?</h1></div>
             <div><h2>Dzięki naszej aplikacji nigdy nie zabraknie Ci miejsc ani pomysłów na trening!</h2></div>
@@ -60,6 +60,8 @@
         <div class="hero"></div>
         <div class="jump"></div>
         <div class="shadow"></div>
+        <!--<div class="game-over"> game over </div>-->
+        <div class="success"> Congratulation!<br> You won!</div>
     </div>
     <div class="nad-sekcja-o-nas">
     </div>
@@ -85,13 +87,13 @@
 <script src="scrollreveal.min.js"></script>
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         $('a[href^="#"]').on('click', function(event) {
 
             var target = $( $(this).attr('href') );
 
-            if( target.length ) {
+            if (target.length) {
                 event.preventDefault();
                 $('html, body').animate({
                     scrollTop: target.offset().top
@@ -131,7 +133,12 @@
 
             this.koniecGry = function () {
                 clearInterval(this.idGry);
-            };
+                if(this.czasGry = 15000) {
+                    this.koniecGry = true;
+                    $(".success").slideDown("fast");
+                }
+
+                };
 
             this.skokGracza = function () {
                 var skok = '150px';
@@ -139,17 +146,16 @@
                 if (this.naZiemi && this.idGry > 0) {
                     this.naZiemi = false;
                     $(".hero").hide(0);
-                    $('.jump').show(0);
+                    $(".jump").show(0);
 
                     $(".jump").animate({top: '-=' + skok}, 200, function () {
                         $(this).animate({top: '+=' + skok}, 200, function () {
                             self.naZiemi = true;
                             $(".hero").show(0);
                             $('.jump').hide(0);
+
                         })
                     });
-
-
                     }
                 };
 
@@ -180,6 +186,12 @@
     // przewija do odpowiedniej sekcji
 
      //parallax
+    //    start gry
+    $('#button-start').click(function () {
+        $('div.cover').addClass('transparent').removeClass('translucent');
+        $('div.button-start').remove();
+    });
+    //parallax
     $(window).scroll(function () {
         var phone=$(".phone");
         var offset=$(this).scrollTop();
@@ -200,7 +212,6 @@
         duration: 500,
         origin: "bottom"
     });
-
 
 </script>
 </body>

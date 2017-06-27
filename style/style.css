@@ -253,6 +253,20 @@ body {
     background-color: #bd5dac;
 }
 
+.hero-ground {
+    background-image: url("../images/postac-ground.png");
+    width: 146px;
+    height: 171px;
+    position: absolute;
+}
+
+.hero-air {
+    background-image: url("../images/postac-air.png");
+    width: 151px;
+    height: 186px;
+    position: absolute;
+}
+
 .dolacz-do-nas header h1 {
     font-family: 'Francois One', sans-serif;
     font-size: 1.8em;
@@ -349,6 +363,25 @@ body {
     display: none;
 }
 
+.game-over {
+    text-transform: uppercase;
+    font-family: "Francois One", sans-serif;
+    font-size: 48px;
+    font-weight: 200;
+    text-align: center;
+    position: absolute;
+    display: none;
+}
+
+.success {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Francois One", sans-serif;
+    font-size: 36px;
+    font-weight: 200;
+    position: absolute;
+    display: none;
+ }
 .o-teamie-naglowek {
     /*margin-top: 75px;*/
     text-align: center;
