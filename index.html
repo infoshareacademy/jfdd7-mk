@@ -60,8 +60,8 @@
         <div class="hero"></div>
         <div class="jump"></div>
         <div class="shadow"></div>
-        <!--<div class="game-over"> game over </div>-->
-        <div class="success"> Congratulation!<br> You won!</div>
+        <div class="success"></div>
+        <div class="game-over"> game over </div>
     </div>
     <div class="nad-sekcja-o-nas">
     </div>
@@ -110,7 +110,7 @@
             this.idGry = 0;
             this.naZiemi = true;
             this.opoznienieStartu = 500;
-            this.czasGry = 15000;
+            this.czasGry = 1000;
             this.predkoscPrzewijania = 10;
 
             this.startGry = function () {
@@ -119,6 +119,7 @@
                 $('.hero, .shadow').show();
                 $('div.cover').removeClass('translucent').addClass('transparent');
                 $('div.button-start').remove();
+
                 setTimeout(function () {
                     self.idGry = setInterval(function () {
                         x -= 1;
@@ -133,11 +134,15 @@
 
             this.koniecGry = function () {
                 clearInterval(this.idGry);
-                if(this.czasGry = 15000) {
+                if(this.czasGry) {
                     this.koniecGry = true;
-                    $(".success").slideDown("fast");
+                    $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
+                    $("div.success").slideDown(2000);
                 }
-
+                else {
+                    $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
+                    $("div.game-over").slideDown(2000);
+                }
                 };
 
             this.skokGracza = function () {
