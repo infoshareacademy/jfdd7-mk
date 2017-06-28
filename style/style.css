@@ -139,7 +139,7 @@ body {
 .header-zajawka {
     width: 350px;
     height: auto;
-    z-index: 9;
+    z-index: 100;
 }
 
 .zajawka h1 {
@@ -253,6 +253,20 @@ body {
     background-color: #bd5dac;
 }
 
+.hero-ground {
+    background-image: url("../images/postac-ground.png");
+    width: 146px;
+    height: 171px;
+    position: absolute;
+}
+
+.hero-air {
+    background-image: url("../images/postac-air.png");
+    width: 151px;
+    height: 186px;
+    position: absolute;
+}
+
 .dolacz-do-nas header h1 {
     font-family: 'Francois One', sans-serif;
     font-size: 1.8em;
@@ -284,7 +298,7 @@ body {
 .nad-sekcja-o-nas {
     width: auto;
     min-height: 600px;
-    background-image: url(../images/zdjecie-do-tla-zajawki.jpg);
+    background-image: url("../images/zdjecie-do-tla-zajawki.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -361,7 +375,7 @@ body {
 .shadow {
     background-image: url("../images/postac-shadow.png");
     height: 100%;
-    width: 50%;
+    width: 100%;
     position: absolute;
     background-repeat: no-repeat;
     top: 316px;
@@ -378,6 +392,28 @@ body {
 .legend h1, p {
     text-align: center;
 }
+
+.game-over {
+    background-image:url("../images/game-over.png");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    display: none;
+    top: 10%;
+    left:36%;
+}
+
+.success {
+    background-image: url("../images/congrats.gif");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    display: none;
+    top: 10%;
+    left: 36%;
+ }
 
 .o-teamie-naglowek {
     /*margin-top: 75px;*/
@@ -443,7 +479,7 @@ footer * {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 0 auto 35px;
+    margin: 0 auto 100px;
     min-height: 349px;
     max-width: 1200px;
 
@@ -493,6 +529,10 @@ footer * {
     position: absolute;
     background-color: white;
     transition: opacity 1s ease-in-out;
+}
+
+.cover-final {
+    transition:none;
 }
 
 .space{

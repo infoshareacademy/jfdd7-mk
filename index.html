@@ -56,11 +56,12 @@
     </section>
     <div id="game" class="game">
         <div class="cover translucent"></div>
-
         <div id="button-start" class="button-start">Start</div>
         <div class="hero"></div>
         <div class="jump"></div>
         <div class="shadow"></div>
+        <div class="success"></div>
+        <div class="game-over"> game over </div>
     </div>
     <div class="legend">
         <h1>Legenda</h1>
@@ -136,7 +137,16 @@
 
             this.koniecGry = function () {
                 clearInterval(this.idGry);
-            };
+                if(this.czasGry) {
+                    this.koniecGry = true;
+                    $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
+                    $("div.success").slideDown(2000);
+                }
+                else {
+                    $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
+                    $("div.game-over").slideDown(2000);
+                }
+                };
 
             this.skokGracza = function () {
                 var skok = '150px';
@@ -151,11 +161,14 @@
                             self.naZiemi = true;
                             $(".hero").show(0);
                             $('.jump').hide(0);
+
                         })
                     });
                 }
             };
 
+                    }
+                };
 
             this.init = function () {
                 var self = this;
@@ -183,17 +196,22 @@
     });
     // przewija do odpowiedniej sekcji
 
+     //parallax
+    //    start gry
+    $('#button-start').click(function () {
+        $('div.cover').addClass('transparent').removeClass('translucent');
+        $('div.button-start').remove();
+    });
+    //parallax
     //parallax
     $(window).scroll(function () {
-        var phone = $(".phone");
-        var offset = $(this).scrollTop();
-        phone.css("background-position-y", offset / 1.9);
-    });
+        var phone=$(".phone");
+        var offset=$(this).scrollTop();
+        phone.css("background-position-y",offset/1.9);});
     $(window).scroll(function () {
-        var woman = $(".woman");
-        var offset = $(this).scrollTop();
-        woman.css("background-position-y", offset / 1.7);
-    });
+        var woman=$(".woman");
+        var offset=$(this).scrollTop();
+        woman.css("background-position-y",offset/1.7);});
 
     // pojawianie się elementow na stronie
 
