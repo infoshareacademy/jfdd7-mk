@@ -369,6 +369,31 @@ body {
     display: none;
 }
 
+.success {
+    background-image: url("../images/congrats.gif");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    display: none;
+    top: 19%;
+    left: 36%;
+}
+
+.game-over {
+    background-image: url("../images/game-over.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    top: 10%;
+    left: 36%;
+}
+
+.cover-final {
+    transition: none;
+}
 .legend {
     width: 100%;
     height: 100%;

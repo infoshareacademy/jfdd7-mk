@@ -61,6 +61,8 @@
         <div class="hero"></div>
         <div class="jump"></div>
         <div class="shadow"></div>
+        <div class="success"></div>
+        <div class="game-over"></div>
     </div>
     <div class="legend">
         <h1>Legenda</h1>
@@ -136,6 +138,14 @@
 
             this.koniecGry = function () {
                 clearInterval(this.idGry);
+                if(this.czasGry) {
+                    $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
+                    $("div.success").slideDown(2000);
+                }
+
+                else {
+                    $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
+                }
             };
 
             this.skokGracza = function () {
@@ -144,7 +154,7 @@
                 if (this.naZiemi && this.idGry > 0) {
                     this.naZiemi = false;
                     $(".hero").hide(0);
-                    $('.jump').show(0);
+                    $(".jump").show(0);
 
                     $(".jump").animate({top: '-=' + skok}, 200, function () {
                         $(this).animate({top: '+=' + skok}, 200, function () {
