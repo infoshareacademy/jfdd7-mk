@@ -139,7 +139,7 @@ body {
 .header-zajawka {
     width: 350px;
     height: auto;
-    z-index: 100;
+    z-index: 9;
 }
 
 .zajawka h1 {
@@ -341,7 +341,7 @@ body {
 .shadow {
     background-image: url("../images/postac-shadow.png");
     height: 100%;
-    width: 100%;
+    width: 50%;
     position: absolute;
     background-repeat: no-repeat;
     top: 316px;
@@ -491,6 +491,9 @@ footer * {
     .menu li {
         padding-bottom: 4px;
     }
+    .woman, .phone {
+        display: none;
+    }
 
 }
 /*ustawienia dla tabletu*/
@@ -514,6 +517,9 @@ footer * {
 
     .header-zajawka {
         max-width: 296px;
+    }
+    .phone .woman {
+        display: none;
     }
 
     #dolacz-do-nas {
