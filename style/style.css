@@ -497,6 +497,16 @@ footer * {
     background-color: white;
     transition: opacity 1s ease-in-out;
 }
+
+.space{
+    background-image: url("../images/postac-ground.png");
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 169px;
+    position: absolute;
+    background-position-x: 200px;
+}
+
 /*ustawienia dla telefonu*/
 @media screen and (max-width:767px) {
     body {
