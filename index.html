@@ -18,12 +18,12 @@
             <li><a href="#o-nas">O NAS</a></li>
         </ul>
     </nav>
-    <div class="clear"> </div>
+    <div class="clear"></div>
 </header>
 <main>
     <header class="zajawka">
-        <figure class="phone"> </figure>
-        <figure class="woman"> </figure>
+        <figure class="phone"></figure>
+        <figure class="woman"></figure>
         <div class="header-zajawka">
             <div><h1>Nie wiesz gdzie poćwiczyć?</h1></div>
             <div><h2>Dzięki naszej aplikacji nigdy nie zabraknie Ci miejsc ani pomysłów na trening!</h2></div>
@@ -56,10 +56,15 @@
     </section>
     <div id="game" class="game">
         <div class="cover translucent"></div>
+
         <div id="button-start" class="button-start">Start</div>
         <div class="hero"></div>
         <div class="jump"></div>
         <div class="shadow"></div>
+    </div>
+    <div class="legend">
+        <h1>Legenda</h1>
+        <p>Omijaj przeszkody! Naciśnij spację lub strzałke w górę by skakać (poprostu dotknij na ekranie dotykowym) </p>
     </div>
     <div class="nad-sekcja-o-nas">
     </div>
@@ -85,13 +90,13 @@
 <script src="scrollreveal.min.js"></script>
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
 
-        $('a[href^="#"]').on('click', function(event) {
+        $('a[href^="#"]').on('click', function (event) {
 
-            var target = $( $(this).attr('href') );
+            var target = $($(this).attr('href'));
 
-            if( target.length ) {
+            if (target.length) {
                 event.preventDefault();
                 $('html, body').animate({
                     scrollTop: target.offset().top
@@ -148,17 +153,16 @@
                             $('.jump').hide(0);
                         })
                     });
+                }
+            };
 
-
-                    }
-                };
 
             this.init = function () {
                 var self = this;
-                $(document).on('click', '.button-start', function(){
+                $(document).on('click', '.button-start', function () {
                     self.startGry();
                 });
-                $(document).on('keydown', function(event){
+                $(document).on('keydown', function (event) {
                     if (event.keyCode === 38 || event.keyCode === 32) {
                         self.skokGracza();
                         event.preventDefault();
@@ -179,15 +183,17 @@
     });
     // przewija do odpowiedniej sekcji
 
-     //parallax
+    //parallax
     $(window).scroll(function () {
-        var phone=$(".phone");
-        var offset=$(this).scrollTop();
-        phone.css("background-position-y",offset/1.9);});
+        var phone = $(".phone");
+        var offset = $(this).scrollTop();
+        phone.css("background-position-y", offset / 1.9);
+    });
     $(window).scroll(function () {
-        var woman=$(".woman");
-        var offset=$(this).scrollTop();
-        woman.css("background-position-y",offset/1.7);});
+        var woman = $(".woman");
+        var offset = $(this).scrollTop();
+        woman.css("background-position-y", offset / 1.7);
+    });
 
     // pojawianie się elementow na stronie
 
