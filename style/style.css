@@ -323,6 +323,26 @@ body {
 
     background-image: url("../images/postac-ground.png");
     height:100%;
+    top: 157px;
+    width:100%;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+.shadow {
+    background-image: url("../images/postac-shadow.png");
+    height:100%;
+    top: 315px;
+    left: 35px;
+    width:100%;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+.jump {
+    background-image: url("../images/postac-air.png");
+    height:100%;
+    top: 157px;
     width:100%;
     position: absolute;
     background-repeat: no-repeat;
@@ -347,6 +367,16 @@ body {
     top: 316px;
     left: 40px;
     display: none;
+}
+
+.legend {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 35px;
+}
+
+.legend h1, p {
+    text-align: center;
 }
 
 .o-teamie-naglowek {
@@ -413,7 +443,7 @@ footer * {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 0 auto 100px;
+    margin: 0 auto 35px;
     min-height: 349px;
     max-width: 1200px;
 
