@@ -322,8 +322,10 @@ body {
 .hero {
 
     background-image: url("../images/postac-ground.png");
-    height:100%;
-    top: 157px;
+    background-size: contain;
+    height:30%;
+    top: 222px;
+    left: 38px;
     width:100%;
     position: absolute;
     background-repeat: no-repeat;
@@ -341,23 +343,16 @@ body {
 
 .jump {
     background-image: url("../images/postac-air.png");
-    height:100%;
-    top: 157px;
+    background-size: contain;
+    height:32%;
+    top: 216px;
+    left: 38px;
     width:100%;
     position: absolute;
     background-repeat: no-repeat;
-    top: 157px;
     display: none;
 }
-.jump {
-    background-image: url("../images/postac-air.png");
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-repeat: no-repeat;
-    top: 140px;
-    display: none;
-}
+
 .shadow {
     background-image: url("../images/postac-shadow.png");
     height: 100%;
@@ -367,6 +362,17 @@ body {
     top: 316px;
     left: 40px;
     display: none;
+}
+
+
+.hurdle {
+    background-image: url("../images/hurdle.png");
+    background-size: contain;
+    height: 36%;
+    width: 18%;
+    top: 233px;
+    position: absolute;
+    background-repeat: no-repeat;
 }
 
 .legend {
@@ -437,7 +443,7 @@ footer * {
 
 /*gra*/
 .game {
-    background-image: url("../images/background-game.jpg");
+    background-image: url("../images/background-game-with-hurdle.jpg");
     position: relative;
     display: flex;
     justify-content: center;
