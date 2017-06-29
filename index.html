@@ -60,7 +60,8 @@
         <div class="hero"></div>
         <div class="jump"></div>
         <div class="shadow"></div>
-        <!--<div class="hurdle"></div>-->
+        <div class="success"></div>
+        <div class="game-over"></div>
     </div>
     <div class="legend">
         <h1>Legenda</h1>
@@ -115,7 +116,7 @@
             this.naZiemi = true;
             this.opoznienieStartu = 500;
             this.czasGry = 15000;
-            this.predkoscPrzewijania =10;
+            this.predkoscPrzewijania = 10;
 
             this.startGry = function () {
                 var x = 0;
@@ -144,6 +145,14 @@
 
             this.koniecGry = function () {
                 clearInterval(this.idGry);
+                if(this.czasGry) {
+                    $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
+                    $("div.success").slideDown(2000);
+                }
+
+                else {
+                    $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
+                }
             };
 
             this.skokGracza = function () {
