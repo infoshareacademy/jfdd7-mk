@@ -116,7 +116,8 @@
             this.naZiemi = true;
             this.opoznienieStartu = 500;
             this.czasGry = 5000;
-            this.predkoscPrzewijania = 0.1;
+            this.predkoscPrzewijania = 0.5;
+
 
             this.startGry = function () {
                 var x = 0;
@@ -129,31 +130,35 @@
                         x -= 1;
                         var y = Math.abs(x % 598);
                         $('.game').css('background-position', x + 'px 0');
-                        if (self.naZiemi && (y > 400 && y < 460) ) {
+                        if (self.naZiemi && (y > 400 && y < 460)) {
                             console.log('wjechales w pierwszy plot', x, y);
-                            self.koniecGry()
+                            self.koniecGryBoKolizja()
 
                         }
                     }, self.predkoscPrzewijania);
 
                     setTimeout(function () {
-                        self.koniecGry()
+                        self.koniecGryBoCzas()
                     }, self.czasGry);
                 }, this.opoznienieStartu);
+
+
             };
 
-                
-
-
-            this.koniecGry = function () {
+            this.koniecGryBoKolizja = function () {
                 clearInterval(this.idGry);
-                if(this.czasGry) {
-                    $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
-                    $("div.success").slideDown(2000);
-                    $('.hero, .shadow').hide()
-                }
-
+                $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
+                $("div.game-over").slideDown(2000);
+                $('.hero, .shadow').hide()
             };
+
+            this.koniecGryBoCzas = function () {
+                clearInterval(this.idGry);
+                $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
+                $("div.success").slideDown(2000);
+                $('.hero, .shadow').hide()
+            };
+
 
             this.skokGracza = function () {
                 var skok = '150px';
@@ -172,7 +177,6 @@
                     });
                 }
             };
-
 
 
 //            this.kolizjaGracza = function(){
@@ -194,7 +198,7 @@
                         event.preventDefault();
                     }
                 });
-                $(document).on('mousedown', function(){
+                $(document).on('mousedown', function () {
                     self.skokGracza();
                 })
 
