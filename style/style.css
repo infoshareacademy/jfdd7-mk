@@ -108,7 +108,7 @@ body {
 }
 
 .zajawka {
-    background-image: url(../images/samo-tlo.jpg);
+    background-image: url("../images/samo-tlo.jpg");
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
@@ -284,7 +284,7 @@ body {
 .nad-sekcja-o-nas {
     width: auto;
     min-height: 600px;
-    background-image: url(../images/zdjecie-do-tla-zajawki.jpg);
+    background-image: url("../images/zdjecie-do-tla-zajawki.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -355,25 +355,25 @@ body {
 }
 
 .success {
-    background-image: url("../images/congrats.gif");
+    background-image: url("../images/game-over.png");
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     position: absolute;
     display: none;
-    top: 19%;
-    left: 36%;
+    top: 16%;
+    left: 39%;
 }
 
 .game-over {
     background-image: url("../images/game-over.png");
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
+    width: 632px;
+    height: 153px;
     position: absolute;
     display: none;
-    top: 10%;
-    left: 36%;
+    top: 16%;
+    left: 39%;
 }
 
 .cover-final {
@@ -496,6 +496,10 @@ footer * {
 }
 .translucent {
     opacity: 0.8;
+}
+
+.translucent2 {
+    opacity: 0.7;
 }
 .cover {
     width: 100%;
