@@ -326,9 +326,10 @@ body {
     height:30%;
     top: 222px;
     left: 38px;
-    width:100%;
+    width:8%;
     position: absolute;
     background-repeat: no-repeat;
+    display: none;
 }
 
 .jump {
@@ -337,7 +338,7 @@ body {
     height:32%;
     top: 216px;
     left: 38px;
-    width:100%;
+    width:8%;
     position: absolute;
     background-repeat: no-repeat;
     display: none;
@@ -345,8 +346,8 @@ body {
 
 .shadow {
     background-image: url("../images/postac-shadow.png");
-    height: 100%;
-    width: 50%;
+    height: 5%;
+    width: 8%;
     position: absolute;
     background-repeat: no-repeat;
     top: 316px;
@@ -368,8 +369,8 @@ body {
 .game-over {
     background-image: url("../images/game-over.png");
     background-repeat: no-repeat;
-    width: 632px;
-    height: 153px;
+    width: 260px;
+    height: 260px;
     position: absolute;
     display: none;
     top: 16%;
