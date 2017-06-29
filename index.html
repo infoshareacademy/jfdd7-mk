@@ -110,13 +110,14 @@
             $('#game').removeClass('hidden');
         });
 
-        var liczbaPlotkow = 0;
+
         var gra = function () {
             this.idGry = 0;
             this.naZiemi = true;
             this.opoznienieStartu = 500;
             this.czasGry = 5000;
             this.predkoscPrzewijania = 0.5;
+            this.bieg = true;
 
 
             this.startGry = function () {
@@ -130,33 +131,43 @@
                         x -= 1;
                         var y = Math.abs(x % 598);
                         $('.game').css('background-position', x + 'px 0');
-                        if (self.naZiemi && (y > 400 && y < 460)) {
+                        if (self.naZiemi && (y > 400 && y < 460) && self.bieg) {
                             console.log('wjechales w pierwszy plot', x, y);
-                            self.koniecGryBoKolizja()
+                            self.bieg = false;
+                            self.koniecGry()
 
                         }
                     }, self.predkoscPrzewijania);
 
                     setTimeout(function () {
-                        self.koniecGryBoCzas()
+                        self.koniecGry()
                     }, self.czasGry);
                 }, this.opoznienieStartu);
 
 
             };
 
-            this.koniecGryBoKolizja = function () {
-                clearInterval(this.idGry);
-                $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
-                $("div.game-over").slideDown(2000);
-                $('.hero, .shadow').hide()
-            };
+//            this.koniecGryBoKolizja = function () {
+//                clearInterval(this.idGry);
+//                $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
+//                $("div.game-over").slideDown(2000);
+//                $('.hero, .shadow').hide()
+//            };
 
-            this.koniecGryBoCzas = function () {
-                clearInterval(this.idGry);
-                $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
-                $("div.success").slideDown(2000);
-                $('.hero, .shadow').hide()
+            this.koniecGry = function () {
+                if (this.bieg === false){
+                    clearInterval(this.idGry);
+                    $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
+                    $("div.success").slideDown(2000);
+                    $('.hero, .shadow').hide()
+                }
+                else {
+                    clearInterval(this.idGry);
+                    $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
+                    $("div.success").slideDown(2000);
+                    $('.hero, .shadow').hide()
+                }
+
             };
 
 
