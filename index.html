@@ -115,8 +115,8 @@
             this.idGry = 0;
             this.naZiemi = true;
             this.opoznienieStartu = 500;
-            this.czasGry = 15000;
-            this.predkoscPrzewijania = 10;
+            this.czasGry = 5000;
+            this.predkoscPrzewijania = 0.1;
 
             this.startGry = function () {
                 var x = 0;
@@ -127,13 +127,12 @@
                 setTimeout(function () {
                     self.idGry = setInterval(function () {
                         x -= 1;
+                        var y = Math.abs(x % 598);
                         $('.game').css('background-position', x + 'px 0');
-//                        console.log(self.naZiemi, parseInt($('.game').css('background-position'))/400, liczbaPlotkow);
-                        if (self.naZiemi && Math.floor(parseInt($('.game').css('background-position'))/380*-1) === 1){
-                            console.log('wjechales w pierwszy plot')
-                        }else if (self.naZiemi && Math.floor(parseInt($('.game').css('background-position'))/598*-1 ) > liczbaPlotkow) {
-                            liczbaPlotkow++;
-                            console.log('wjechales w '+liczbaPlotkow+' plotek')
+                        if (self.naZiemi && (y > 400 && y < 460) ) {
+                            console.log('wjechales w pierwszy plot', x, y);
+                            self.koniecGry()
+
                         }
                     }, self.predkoscPrzewijania);
 
@@ -143,16 +142,17 @@
                 }, this.opoznienieStartu);
             };
 
+                
+
+
             this.koniecGry = function () {
                 clearInterval(this.idGry);
                 if(this.czasGry) {
                     $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
                     $("div.success").slideDown(2000);
+                    $('.hero, .shadow').hide()
                 }
 
-                else {
-                    $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
-                }
             };
 
             this.skokGracza = function () {
