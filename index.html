@@ -56,7 +56,6 @@
     </section>
     <div id="game" class="game">
         <div class="cover translucent"></div>
-
         <div id="button-start" class="button-start">Start</div>
         <div class="hero"></div>
         <div class="jump"></div>
@@ -111,6 +110,7 @@
             $('#game').removeClass('hidden');
         });
 
+        var liczbaPlotkow = 0;
         var gra = function () {
             this.idGry = 0;
             this.naZiemi = true;
@@ -128,6 +128,13 @@
                     self.idGry = setInterval(function () {
                         x -= 1;
                         $('.game').css('background-position', x + 'px 0');
+//                        console.log(self.naZiemi, parseInt($('.game').css('background-position'))/400, liczbaPlotkow);
+                        if (self.naZiemi && Math.floor(parseInt($('.game').css('background-position'))/380*-1) === 1){
+                            console.log('wjechales w pierwszy plot')
+                        }else if (self.naZiemi && Math.floor(parseInt($('.game').css('background-position'))/598*-1 ) > liczbaPlotkow) {
+                            liczbaPlotkow++;
+                            console.log('wjechales w '+liczbaPlotkow+' plotek')
+                        }
                     }, self.predkoscPrzewijania);
 
                     setTimeout(function () {
@@ -154,10 +161,10 @@
                 if (this.naZiemi && this.idGry > 0) {
                     this.naZiemi = false;
                     $(".hero").hide(0);
-                    $(".jump").show(0);
+                    $('.jump').show(0);
 
-                    $(".jump").animate({top: '-=' + skok}, 200, function () {
-                        $(this).animate({top: '+=' + skok}, 200, function () {
+                    $(".jump").animate({top: '-=' + skok}, 400, function () {
+                        $(this).animate({top: '+=' + skok}, 400, function () {
                             self.naZiemi = true;
                             $(".hero").show(0);
                             $('.jump').hide(0);
@@ -165,6 +172,15 @@
                     });
                 }
             };
+
+
+
+//            this.kolizjaGracza = function(){
+//                console.log('xxx');
+//                if (this.naZiemi && ($('.game').attr('style')) == 'background-position: -390px'){
+//                    console.log('wjechales w pierwszy plotek')
+//                }
+//            }
 
 
             this.init = function () {
