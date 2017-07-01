@@ -323,10 +323,11 @@ body {
 
     background-image: url("../images/postac-ground.png");
     background-size: contain;
-    height:30%;
-    top: 222px;
+    background-position: bottom;
+    height:30vw;
+    bottom: 24px;
     left: 38px;
-    width:8%;
+    width:8vw;
     position: absolute;
     background-repeat: no-repeat;
     display: none;
@@ -335,10 +336,11 @@ body {
 .jump {
     background-image: url("../images/postac-air.png");
     background-size: contain;
-    height:32%;
-    top: 216px;
+    background-position: bottom;
+    bottom: 28px;
+    height:32vw;
     left: 38px;
-    width:8%;
+    width:8vw;
     position: absolute;
     background-repeat: no-repeat;
     display: none;
@@ -346,11 +348,11 @@ body {
 
 .shadow {
     background-image: url("../images/postac-shadow.png");
-    height: 5%;
-    width: 8%;
+    height: 15px;
+    width: 85px;
     position: absolute;
     background-repeat: no-repeat;
-    top: 316px;
+    top: 315px;
     left: 40px;
     display: none;
 }
@@ -539,10 +541,18 @@ footer * {
     .woman, .phone {
         display: none;
     }
+    .game, .legend  {
+        display: none;
 
+    }
 }
+
 /*ustawienia dla tabletu*/
 @media screen and (min-width: 768px) and (max-width: 991px){
+    /*.game, .legend  {*/
+        /*display: none;*/
+
+    /*}*/
     body {
         font-size: 18px;
     }
@@ -561,7 +571,7 @@ footer * {
     }
 
     .header-zajawka {
-        max-width: 296px;
+        max-width: 200px;
     }
     .phone .woman {
         display: none;
