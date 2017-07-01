@@ -55,7 +55,8 @@
         </form>
     </section>
     <div id="game" class="game">
-        <div class="cover"></div>
+        <div class="cover translucent"></div>
+        <div class="legend"></div>
         <div id="button-start" class="button-start">Start</div>
         <div class="hero"></div>
         <div class="jump"></div>
@@ -120,6 +121,7 @@
                 var self = this;
 
                 $('div.cover').removeClass('translucent').addClass('transparent');
+                $('div.legend').remove();
                 $('div.button-start').remove();
                 $('.hero, .shadow').show();
                 setTimeout(function () {
