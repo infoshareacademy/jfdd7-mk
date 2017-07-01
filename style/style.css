@@ -358,18 +358,18 @@ body {
 }
 
 .success {
-    background-image: url("../images/game-over.png");
+    background-image: url("../images/success.png");
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     position: absolute;
     display: none;
     top: 16%;
-    left: 2%;
+    left: 39%;
 }
 
 .game-over {
-    background-image: url("../images/game-over.png");
+    background-image: url("../images/gameover.png");
     background-repeat: no-repeat;
     width: 260px;
     height: 260px;
