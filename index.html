@@ -56,16 +56,13 @@
     </section>
     <div id="game" class="game">
         <div class="cover translucent"></div>
+        <div class="legend"></div>
         <div id="button-start" class="button-start">Start</div>
         <div class="hero"></div>
         <div class="jump"></div>
         <div class="shadow"></div>
         <div class="success"></div>
         <div class="game-over"></div>
-    </div>
-    <div class="legend">
-        <h1>Legenda</h1>
-        <p>Omijaj przeszkody! Naciśnij spację lub strzałke w górę by skakać (poprostu dotknij na ekranie dotykowym) </p>
     </div>
     <div class="nad-sekcja-o-nas">
     </div>
@@ -89,7 +86,6 @@
 </footer>
 <script src="jquery-3.2.1.min.js"></script>
 <script src="scrollreveal.min.js"></script>
-<link rel="stylesheet" type="text/css" href="style/style.css">
 <script>
     $(document).ready(function () {
 
@@ -125,6 +121,7 @@
                 var self = this;
 
                 $('div.cover').removeClass('translucent').addClass('transparent');
+                $('div.legend').remove();
                 $('div.button-start').remove();
                 $('.hero, .shadow').show();
                 setTimeout(function () {
@@ -133,7 +130,6 @@
                         var y = Math.abs(x % 598);
                         $('.game').css('background-position', x + 'px 0');
                         if (self.naZiemi && (y > 400 && y < 460) && self.bieg) {
-                            console.log('wjechales w pierwszy plot', x, y);
                             self.bieg = false;
                             self.koniecGry()
 
@@ -156,21 +152,16 @@
 //            };
 
             this.koniecGry = function () {
+                clearInterval(this.idGry);
+                $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
                 if (this.bieg === false){
-                    clearInterval(this.idGry);
-                    $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
                     $("div.game-over").slideDown(2000);
-                    $('div.hero, div.shadow, div.jump').remove()
                 }
                 else {
-                    clearInterval(this.idGry);
-                    $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
                     $("div.success").slideDown(2000);
-                    $('div.hero, div.shadow, div.jump').remove()
                 }
-
+                $('div.hero, div.shadow, div.jump').remove()
             };
-
 
             this.skokGracza = function () {
                 var skok = '150px';
