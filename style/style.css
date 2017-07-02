@@ -506,6 +506,22 @@ footer * {
     background-size: contain;
     background-image: url("../images/legend.png");
 }
+.restart {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: #3c3636;
+    color: white;
+    position: absolute;
+    right: 10px;
+    top:10px;
+    cursor: pointer;
+    border: none;
+    font-size: 2.7em;
+}
+.restart:hover {
+    background-color: #484848;
+}
 
 /*ustawienia dla telefonu*/
 @media screen and (max-width:767px) {
