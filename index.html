@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Gdzie poćwiczę?</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Francois+One|Ubuntu+Condensed" rel="stylesheet">
     <meta name="viewport" content="wdth=device-width, initial-scale=1">
 <body>
@@ -63,6 +64,7 @@
         <div class="shadow"></div>
         <div class="success"></div>
         <div class="game-over"></div>
+        <button class="restart hidden"><i class="fa fa-refresh"></i></button>
     </div>
     <div class="nad-sekcja-o-nas">
     </div>
@@ -107,11 +109,13 @@
         });
 
 
-        var gra = function () {
+        var gra;
+        gra = function () {
             this.idGry = 0;
+            this.idGameTimeout = 0;
             this.naZiemi = true;
             this.opoznienieStartu = 500;
-            this.czasGry = 60000;
+            this.czasGry = 20000;
             this.predkoscPrzewijania = 0.5;
             this.bieg = true;
 
@@ -121,9 +125,9 @@
                 var self = this;
 
                 $('div.cover').removeClass('translucent').addClass('transparent');
-                $('div.legend').hide();
-                $('div.button-start').hide();
+                $('div.legend, div.button-start').hide();
                 $('.hero, .shadow').show();
+
                 setTimeout(function () {
                     self.idGry = setInterval(function () {
                         x -= 1;
@@ -136,7 +140,7 @@
                         }
                     }, self.predkoscPrzewijania);
 
-                    setTimeout(function () {
+                    self.idGameTimeout = setTimeout(function () {
                         self.koniecGry()
                     }, self.czasGry);
                 }, this.opoznienieStartu);
@@ -144,23 +148,31 @@
 
             };
 
-//            this.koniecGryBoKolizja = function () {
-//                clearInterval(this.idGry);
-//                $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
-//                $("div.game-over").slideDown(2000);
-//                $('.hero, .shadow').hide()
-//            };
-
+//
             this.koniecGry = function () {
                 clearInterval(this.idGry);
+                clearTimeout(this.idGameTimeout);
+                this.idGry = 0;
+                this.idGameTimeout = 0;
                 $("div.cover").removeClass('transparent').addClass('translucent').addClass('cover-final');
-                if (this.bieg === false){
+                $('button.restart').show();
+                if (this.bieg === false) {
                     $("div.game-over").slideDown(2000);
                 }
                 else {
                     $("div.success").slideDown(2000);
                 }
-                $('div.hero, div.shadow, div.jump').remove()
+                $('div.hero, div.shadow, div.jump').hide();
+            };
+
+            this.restart = function () {
+                var self = this;
+                this.naZiemi = true;
+                this.bieg = true;
+                $('div.cover').removeClass('cover-final');
+                $('div.game-over, button.restart, div.success').hide();
+                $('div.hero, div.shadow').show();
+                self.startGry();
             };
 
             this.skokGracza = function () {
@@ -182,18 +194,13 @@
             };
 
 
-//            this.kolizjaGracza = function(){
-//                console.log('xxx');
-//                if (this.naZiemi && ($('.game').attr('style')) == 'background-position: -390px'){
-//                    console.log('wjechales w pierwszy plotek')
-//                }
-//            }
-
-
             this.init = function () {
                 var self = this;
                 $(document).on('click', '.button-start', function () {
                     self.startGry();
+                });
+                $(document).on('click', '.restart', function () {
+                    self.restart();
                 });
                 $(document).on('keydown', function (event) {
                     if (event.keyCode === 38 || event.keyCode === 32) {
