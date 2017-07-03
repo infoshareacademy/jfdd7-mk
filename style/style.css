@@ -1,5 +1,6 @@
 section {
     margin-bottom: 50px;
+
 }
 
 body {
@@ -307,12 +308,17 @@ body {
     font-family: "Francois One", sans-serif;
 }
 
+.zdjecia-o-nas{
+    display: flex;
+}
+
 .o-nas {
     background-color: #d3caa3;
     background: linear-gradient(#d3caa3, #d3cb73);
     text-align: center;
     font-family: "Francois One", sans-serif;
-    padding-top: 63px;
+    padding-top: 1px;
+    padding-bottom: 85px;
     margin-bottom: 0;
 }
 .o-nas ul {
@@ -320,7 +326,6 @@ body {
 }
 
 .hero {
-
     background-image: url("../images/postac-ground.png");
     background-size: contain;
     background-position: bottom;
@@ -377,12 +382,118 @@ body {
     transition: none;
 }
 
-
 .o-teamie-naglowek {
-    /*margin-top: 75px;*/
+    display: inline;
+    margin-top: 0px;
     text-align: center;
     font-family: "Francois One", sans-serif;
 }
+
+.circle-container {
+
+    position: relative;
+    perspective: 1000;
+    margin: auto;
+}
+
+.circle-container:hover .circle {
+    transform: rotate3d(45, 45, 0, 180deg);
+}
+
+.circle-container:hover .outer-ring {
+    transform: rotate3d(45, 0, 0, 180deg);
+}
+
+.circle-container:hover .outer-outer-ring {
+    transform: rotate3d(0, 45, 0, 180deg);
+}
+
+.circle-container, .front, .back {
+    width: 174px;
+    height: 174px;
+    background-color: rgba(0,0,0,0);
+}
+
+.circle, .outer-ring, .outer-outer-ring {
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.circle {
+    position: relative;
+    width: 174px;
+    height: 174px;
+}
+
+.front, .back {
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+
+    background-size: contain;
+    z-index: 2;
+}
+
+.back-tlo {
+
+    margin-top: 0;
+    font-family: cabin, sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+}
+.back-tlo img{
+
+    margin-top: 43px;
+    height: 50%;
+    width: 50%;
+}
+
+.back {
+    transform: rotate3d(45,45,0,180deg);
+    background-color: #b543a0;
+
+}
+
+.back-logo {
+    width: 60%;
+    display: block;
+    margin: 2em auto;
+
+}
+
+.outer-ring {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    width: 190px;
+    height: 190px;
+    background-color: rgba(255,255,255,0);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+}
+
+.outer-outer-ring {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    width: 210px;
+    height: 210px;
+    background-color: rgba(255,255,255,0);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+}
+
 
 .informacje-o-dominice {
     background-image: url("../images/dominika-zdjecie-zespolu.png");
@@ -430,9 +541,7 @@ footer * {
     display: inline-block;
 }
 
-.o-nas {
-    margin-bottom: 0;
-}
+
 
 /*gra*/
 .game {
@@ -454,7 +563,7 @@ footer * {
     background: url("../images/reka-z-telefonem.png");
     background-repeat: no-repeat;
     position: absolute ;
-    }
+}
 
 .button-start {
     display: flex;
@@ -562,7 +671,7 @@ footer * {
 /*ustawienia dla tabletu*/
 @media screen and (min-width: 768px) and (max-width: 991px){
     /*.game, .legend  {*/
-        /*display: none;*/
+    /*display: none;*/
 
     /*}*/
     body {
