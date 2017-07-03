@@ -310,6 +310,11 @@ body {
 
 .zdjecia-o-nas{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.margin-container {
+    margin: 20px;
 }
 
 .o-nas {
@@ -321,6 +326,7 @@ body {
     padding-bottom: 85px;
     margin-bottom: 0;
 }
+
 .o-nas ul {
     padding-left: 0;
 }
@@ -428,7 +434,7 @@ body {
 
 .front, .back {
     border-radius: 50%;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
     backface-visibility: hidden;
     position: absolute;
     top: 0;
@@ -479,7 +485,7 @@ body {
     width: 190px;
     height: 190px;
     background-color: rgba(255,255,255,0);
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
 .outer-outer-ring {
@@ -491,7 +497,7 @@ body {
     width: 210px;
     height: 210px;
     background-color: rgba(255,255,255,0);
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
 
